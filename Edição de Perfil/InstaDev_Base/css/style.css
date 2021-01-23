@@ -1,3 +1,4 @@
+@import url('//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,15 +6,21 @@
 
 }
 
+body{
+    background-color: white;
+    display: flex;
+}
+
 .menu{
     width: 100%;
     height: 100px;
     align-items: center;
+    box-shadow: 2px 2px 0px rgb(167, 163, 163, 0.3);
 }
 
 .nav{
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     height: 80px;
     display: flex;
     max-width: 1400px;
@@ -22,27 +29,51 @@
 
 }
 
+/* Aqui criamos a Logo, Redimensionamos e alinhamos */
+
+
+.logo img{
+    width:78px;
+    height: 27px;
+}
+
+/* Aqui é a área de pesquisa */
+.search{
+    width: 220px;
+    height: 30px;
+    display: flex;
+    font-family:'Segoe UI',sans-serif;
+    align-items:center;
+    color: #AFAFAF;
+    justify-content: center;
+    border: solid 1px #AFAFAF;
+    border-radius: 3px;
+
+}
 .search i{
     display: flex;
-    padding: 0px 10px;
+    padding: 0px 5px;
+    align-items:center;
+    font-size: 13px;
 }
 
-.search{
-    display: flex;
-}
-
+/* Aqui é o Menu com as opções */
 .menu-btn{
     justify-content: space-between;
     display: flex;
+    align-items: center;
    
 }
 
 .menu-btn i{
     padding: 0px 10px;
+    font-size: 20px 21px;
 }
 
-
+/* Aqui é a imagem de perfil */
 .perfil img{ 
     display: flex;
+    width: 32px;
+    height: 32px;
 }
 
