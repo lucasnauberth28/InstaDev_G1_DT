@@ -8,8 +8,9 @@
 
 body{
     background-color: white;
-    display: flex;
 }
+
+/* MENU */
 
 .menu{
     width: 100%;
@@ -39,8 +40,8 @@ body{
 
 /* Aqui é a área de pesquisa */
 .search{
-    width: 220px;
-    height: 30px;
+    width: 225px;
+    height: 23px;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -89,3 +90,153 @@ body{
     height: 32px;
 }
 
+
+/* EDIÇÃO DE PERFIL */
+
+
+.infos{
+    margin-top: 10px;
+    height:600px;
+    width: 100%;
+    display: flex;
+}
+
+.container{
+    width:71%;
+    height:600px;
+   display: flex;
+    max-width:1400px;
+    margin: 0 auto;
+   
+}
+
+
+.title{
+    display: flex;
+    width: 30%;
+    height: 50px;
+    padding-left: 5px;
+    align-items: center;
+    font-family: 'Segoe UI',sans-serif;
+    color:#000;
+    font-size: 18px;
+    border-left:solid 2px black;
+    font-style: initial;
+}
+
+/* Informações de Perfil */
+
+.opcoes{
+    width:70%;
+    height: 60px;
+    
+    
+}
+
+.perfilFoto img{
+    display: flex;
+    width: 48px;
+    height: 48px;
+
+}
+
+.perfilFoto{
+    font-family: 'Segoe UI',sans-serif;
+    display: flex;
+    padding: 10px 20px;
+    
+}
+
+.perfilFoto p{
+    font-size: 18px;
+}
+
+.perfilFoto a{
+    color: #2686CC;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.textFoto{
+    padding-left: 10px;
+    
+}
+
+.edicoes{
+    width:70%;
+    height: 400px;
+    font-family: 'Segoe UI', sans-serif;
+    
+}
+
+.name, .email, .nick{
+    display: flex;
+    padding-top: 50px;
+}
+
+.name h2, .email h2 , .nick h2{
+    font-size: 15px;
+    padding-right: 10px;
+
+}
+
+.name p, .nick p, .email p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color:#909090;
+
+}
+
+.text input{
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 354px;
+    height: 30px;
+}
+
+.text h3{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color:#909090;
+
+    padding-top: 15px;
+}
+
+.nick{
+    position: relative;
+    right: 22px;
+}
+
+.nick h2{
+    text-indent: -50px;
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    width: 470px;
+    height: 50px;
+    justify-content: space-around;
+    font-family: 'Segoe UI',sans-serif;
+}
+
+.btn{
+   text-decoration: none;
+   background-color: #2686CC;
+   color: #FFFFFF;
+   padding: 8px 15px;
+   border-radius: 4px;
+   
+}
+
+.desative{
+    color: #2686CC;
+    text-decoration: none;
+    font-size: 12px;
+}
