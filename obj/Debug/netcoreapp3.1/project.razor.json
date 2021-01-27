@@ -14397,6 +14397,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\InstaDev\\InstaDev_G1_DT\\Views\\PageRegister\\Index.cshtml",
+      "TargetPath": "Views\\PageRegister\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\InstaDev\\InstaDev_G1_DT\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
