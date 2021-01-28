@@ -17,6 +17,7 @@ body {
 
 
 .centraform {
+    background-color: white;
   width:342px;
   height: 380px;
   background-color:white;
@@ -81,6 +82,12 @@ body {
     margin-left: 120px;
     margin-top: 24px;
 }
+.centralizarcadastrese {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .centrafoot {
 display: flex;
 justify-content: center;
@@ -88,6 +95,8 @@ align-items: flex-end;
  
 }
 .frasenocentro {
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
