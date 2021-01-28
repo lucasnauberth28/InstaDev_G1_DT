@@ -17,7 +17,17 @@
     text-decoration: none; /* desativa a opção de "estilo de lista" (por exemplo, aqueles "pontos/bolinhas" que ficam em tópicos) */
 }
 :root{ /* esse ":root" será uma "raiz" para podermos salvar cores e outras coisas */
-    --background: #FAFAFA; /* isso funciona como se fosse um "pote de tinta", temos aqui um pote de tinta branca-acinzentada que será usado no background dela, porém pode ser usada em outros lugares, mas não é muito recomendável por conta da organização */
+    /* isso funciona como se fosse um "pote de tinta", temos aqui um pote de tinta branca-acinzentada que será usado no background dela, porém pode ser usada em outros lugares, mas não é muito recomendável por conta da organização */
+    
+    --mainBackground: #FAFAFA; /* cor de fundo e de dentro dos inputs */
+    --squareBackground: #FFFFFF; /* cor das áreas de formulários, por exemplo, dentro de onde o usuário vai preencher seus dados(Cadastro) ou entrar na conta(Login) */
+    --squareBorders: #DBDBDB; /* cor das bordas das áreas de formulário, por exemplo */
+    --preFormLetters: #8E8E8E; /* cor das letras do pré formulário */
+    --inputBordersNotClicked: #EEEEEE; /* cor das bordas dos inputs quando "NÃO CLICADOS"*/
+    --inputBorderClicked: #A7A7A7; /* cor das bordas dos inputs quando "CLICADOS" */
+    --inputLetters: #8D9191; /* cor das letras que ficam dentro dos inputs especificando o que é para preencher dentro */
+    --buttonsNotClicked: #0095f6; /* cor dos botões de cadastro e login ainda "NÃO CLICADOS" */
+    --buttonsClicked: #4CB5F9; /* cor dos botões de cadastro e login ainda "CLICADOS" */
 }
 main{ /* aqui mexeremos no básico do conteúdo principal da página */
     width: 100%; /* a largura do elemento base do conteúdo principal será 100%, ou seja, ocupará 100% da largura (horizontal) da tela em quaisquer resolução que esteja */
@@ -27,7 +37,7 @@ main{ /* aqui mexeremos no básico do conteúdo principal da página */
     justify-content: center; /* um comando disponibilizado pelo "display: flex" || esse comando mudará a posição do elemento para que se existissem mais elementos, ficariam um do lado do outro, como uma coluna na horizontal || isso também mudará o eixo de movimento do elemento, pois no padrão, o elemento é geralmente movimentado no eixo Y, porém com esse comando, será movimentado no eixo X*/
     align-items: center; /* um comando disponibilizado pelo "display: flex" || esse comando movimentará o elemento para o meio da página (sem estar grudado na "parede") */
     height: 100vh; /* essa medida "vh" é uma medida relativa || o "vh" é igual a 1/100px da altura do ViewPort, ou seja, se a altura do ViewPort é 900px, 1vh será igual a 9px, então, 100vh é igual a 900px da ViewPort */
-    background-color: var(--background); /* aqui está sendo puxada o "pote de tinta" do ":root" para ser colocada no background do "main" */
+    background-color: var(--mainBackground); /* aqui está sendo puxada o "pote de tinta" do ":root" para ser colocada no background do "main" */
 }
 .form-section{ /* aqui iremos mexer nas configurações da sessão do formulário, onde está todo o conteúdo onde o usuário terá que preencher para se cadastrar */
     width: 350px; /* a largura do elemento no qual ficará o formulário de cadastro será de 100% */
@@ -39,15 +49,15 @@ main{ /* aqui mexeremos no básico do conteúdo principal da página */
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
-    border: 1px solid #dddcdc;
+    background-color: var(--squareBackground);
+    border: 1px solid var(--squareBorders);
     padding: 20px;
 }
 .register-title{ /* aqui iremos modificar o título "InstaDev" do formulário */
     height: 75px;
     font-family: 'BillabongW00-Regular', serif; /* aqui pegamos a fonte do título que estava no Figma do professor (essa "billabong"); a fonte "serif" é apenas um "substituto" para a fonte principal (billabong) caso ela dê erro */
     font-weight: normal;
-    font-size: 4.5em; /* esse será o tamanho da fonte */
+    font-size: 3.7em; /* esse será o tamanho da fonte */
     margin-bottom: 0; /* esse comando criará uma margem em baixo do título, fazendo com que ele suba */
     user-select: none; /* esse comando não deixará com que o usuário consiga selecionar o título "InstaDev" */
 }
@@ -61,22 +71,22 @@ main{ /* aqui mexeremos no básico do conteúdo principal da página */
     font-weight: bold;
     display: flex;
     justify-content: center;
-    color: #777777;
+    color: var(--preFormLetters);
 }
 .input{ /* aqui irá mexer nos inputs do formulário */
     width: 100%; /* a largura dos inputs ocuparão toda a "caixa" do formulário */
     height: 40px; /* os inputs terão 30px de altura */
     margin-bottom: 10px; /* criará uma margem de 10px em baixo de cada input, separando-os */
-    background-color: #FAFAFA; /* os fundos dos inputs serão desta cor */
-    border: 1px solid #EFEFEF; /* as bordas dos inputs serão terão a "grossura" de 2px com a cor hexagonal que está no comando */
+    background-color: var(--mainBackground); /* os fundos dos inputs serão desta cor */
+    border: 1px solid var(--inputBordersNotClicked); /* as bordas dos inputs serão terão a "grossura" de 2px com a cor hexagonal que está no comando */
     font-size: 13px; /* o tamanho das fontes que ficarão dentro do input serão de 12px */
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    color: black;
+    color: var(--inputLetters);
     border-radius: 3px; /* as bordas ficarão arredondadas */
     padding: 10px; /* as escritas dentro do input terão margens (que no caso será o padding) de 10px, desgrudando as letras das bordas */
 }
 .input:focus{ /* esse ":focus" será responsável pela mudança dentro do input quando clicarmos nele (ou seja, darmos foco) */
-    border: 1px solid #B2B2B2; /* quando focarmos em tal input, a borda mudará para essa e, ficará com 1px de "grossura" com uma cor mais escura */
+    border: 1px solid var(--inputBorderClicked); /* quando focarmos em tal input, a borda mudará para essa e, ficará com 1px de "grossura" com uma cor mais escura */
 }
 .register-btn{ /* aqui vamos mudar o botão de cadastrar */
     width: 300px; /* mudando a largura do botão para 300px */
@@ -88,10 +98,10 @@ main{ /* aqui mexeremos no básico do conteúdo principal da página */
     margin-bottom: 1em; /* irá criar uma margem a baixo do botão de 1em (1em = 16px) */
     border: 0;
     border-radius: 6px;
-    background-color: #2686CC; /* a cor do botão mudou para azul */
+    background-color: var(--buttonsNotClicked); /* a cor do botão mudou para azul */
 }
 .register-btn:focus{
-    background-color: #32a0ee;
+    background-color: var(--buttonsClicked);
     animation-duration: 0ms;
 }
 .pos-form{
