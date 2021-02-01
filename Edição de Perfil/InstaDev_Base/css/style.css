@@ -162,6 +162,9 @@ body{
     
 }
 
+.textFoto a:hover{
+    text-decoration: underline;
+}
 .edicoes{
     width:70%;
     height: 400px;
@@ -220,10 +223,11 @@ body{
 .botao{
     display: flex;
     align-items: center;
-    width: 470px;
+    width: 600px;
     height: 50px;
     justify-content: space-around;
     font-family: 'Segoe UI',sans-serif;
+
 }
 
 .btn{
@@ -235,8 +239,16 @@ body{
    
 }
 
+.btn:hover{
+    background-color: #1c6396;
+}
+
 .desative{
     color: #2686CC;
     text-decoration: none;
     font-size: 12px;
+}
+
+.desative:hover{
+    text-decoration: underline;
 }
