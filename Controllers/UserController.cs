@@ -26,8 +26,6 @@ namespace InstaDev_G1_DT.Controllers
             newUser.UserName = registrationForm["UserName"];
             newUser.Password = registrationForm["Password"];
 
-            var passwordLength = newUser.Password;
-
             userModels.Create(newUser);
             ViewBag.Users = userModels.ReadAllItems();
 
