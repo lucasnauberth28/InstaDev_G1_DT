@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Edição de Perfil/bin/Debug/netcoreapp3.1/Projeto Lucas Nauberth.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/InstaDev_G1_DT.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Edição de Perfil",
+            "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
