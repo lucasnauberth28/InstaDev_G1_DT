@@ -34,4 +34,4 @@ C:\Users\User\Desktop\SENAI\ATVIDADES\InstaDev\InstaDev_G1_DT\obj\Debug\netcorea
 C:\Users\User\Desktop\SENAI\ATVIDADES\InstaDev\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.pdb
 C:\Users\User\Desktop\SENAI\ATVIDADES\InstaDev\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.genruntimeconfig.cache
 C:\Users\User\Desktop\SENAI\ATVIDADES\InstaDev\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.csproj.CopyComplete
-C:\Users\User\Desktop\SENAI\ATVIDADES\InstaDev\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\PageRegister\Index.cshtml.g.cs
+C:\Users\User\Desktop\SENAI\ATVIDADES\InstaDev\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs
