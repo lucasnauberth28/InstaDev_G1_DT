@@ -4,20 +4,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InstaDev_G1_DT.Controllers
 {
-    // localhost:5001/Instadev
+    // localhost:5001/User
     [Route ("User")]
     public class UserController:Controller
     {
         User userModels = new User();
 
-        // localhost:5001/Instadev/Cadastro
+        // localhost:5001/User/Register
         [Route ("Register")]
         public IActionResult Register(){
             ViewBag.Users = userModels.ReadAllItems();
             return View();
         }
 
-        // localhost:5001/Instadev/Cadastrando
+        // localhost:5001/User/New
         [Route ("New")]
         public IActionResult Register(IFormCollection registrationForm){ // o IActionResult e o IFormCollection fazem parte de bibliotecas do AspNetCore
             User newUser = new User();
@@ -26,10 +26,12 @@ namespace InstaDev_G1_DT.Controllers
             newUser.UserName = registrationForm["UserName"];
             newUser.Password = registrationForm["Password"];
 
+            var passwordLength = newUser.Password;
+
             userModels.Create(newUser);
             ViewBag.Users = userModels.ReadAllItems();
 
-            // localhost:5001/Instadev/Cadastro
+            // localhost:5001/User/Register
             return LocalRedirect("~/User/Register");
         }
     }
