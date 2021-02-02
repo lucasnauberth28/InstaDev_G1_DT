@@ -151,10 +151,11 @@ body{
     font-size: 18px;
 }
 
-.perfilFoto a{
+.btn-img{
     color: #2686CC;
     font-size: 14px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .textFoto{
@@ -162,7 +163,7 @@ body{
     
 }
 
-.textFoto a:hover{
+.btn-img:hover{
     text-decoration: underline;
 }
 .edicoes{

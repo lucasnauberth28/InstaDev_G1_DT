@@ -33,5 +33,15 @@ namespace InstaDev_G1_DT.Models
                 return linesRead; // esse atributo linesRead será retornado toda vez que o método ReadAllLinesCSV for chamado
             }
         }
+
+        public void RewriteCSV(string PATH, List<string> lines){// o StreamWriter vai escrever as informações do CSV
+            using(StreamWriter output = new StreamWriter(PATH)) // Perguntar pro Saulo a utilidade de output
+            {
+                foreach (var item in lines) 
+                {
+                    output.Write(item + "\n");
+                }
+            }
+        }
     }
 }

@@ -14397,6 +14397,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Saga\\Desktop\\InstaDev Project\\InstaDev_G1_DT\\Views\\User\\EditProfile.cshtml",
+      "TargetPath": "Views\\User\\EditProfile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Saga\\Desktop\\InstaDev Project\\InstaDev_G1_DT\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -14414,6 +14419,11 @@
     {
       "FilePath": "c:\\Users\\Saga\\Desktop\\InstaDev Project\\InstaDev_G1_DT\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Saga\\Desktop\\InstaDev Project\\InstaDev_G1_DT\\Views\\User\\Register.cshtml",
+      "TargetPath": "Views\\User\\Register.cshtml",
       "FileKind": "mvc"
     },
     {

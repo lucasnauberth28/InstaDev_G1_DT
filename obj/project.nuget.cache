@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jy5iTuFYw4NDPd6LkiO0Pd3JHNl2npa9EoqD6R4qHlHYXl6SFdLSP2SDA7ismc/Z1BNf1fUIMTnO3KJjcwkHIQ==",
+  "dgSpecHash": "gA1NiA5qchwYOcrA63LygEzlQasgtKW0gOugb+cQWU3PJR2Ot4dOHXWeGKsj0IKJ6SEY39j0Ny+Xg3w1ZU8Fgg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\InstaDev\\InstaDev_G1_DT\\InstaDev_G1_DT.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Saga\\Desktop\\InstaDev Project\\InstaDev_G1_DT\\InstaDev_G1_DT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Saga\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.11\\microsoft.netcore.app.host.win-x64.3.1.11.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,15 +1,18 @@
+@{
+    ViewData["Title"] = "EditProfile";
+}
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Edição de Perfil</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/EditProfile.css">
         <script src="https://kit.fontawesome.com/88f063c67b.js" crossorigin="anonymous"></script>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     </head>
-
     <body>
         <header class="menu">
             <section class="nav">
@@ -80,15 +83,12 @@
                             </div>
                         </div>
                         <div class="botao">
-                            <a href="#" class="btn">Enviar</a>
-                            <a href="#" class="btn">Sair</a>
+                            <a asp-action="EditProfile" asp-controller="User" class="btn">Enviar</a>
+                            <a asp="#" class="btn">Sair</a>
                             <a href="#" class="desative">Desativar minha conta definitivamente</a>
                         </div>
                     </div>
-                    
             </section>
         </main>
-    
     </body>
-
 </html>
