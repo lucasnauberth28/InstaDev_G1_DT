@@ -12,30 +12,29 @@
                 <p>vídeos dos seus amigos.</p>
             </div>
 
-            <form method="POST" action='@Url.Action("Registration")'> <!-- esse será o formulário sem si || aqui ficará os "inputs" para o usuário preencher -->
+            <form method="POST" action='@Url.Action("New")'> <!-- esse será o formulário sem si || aqui ficará os "inputs" para o usuário preencher -->
                 
                 <!-- começo da parte dos inputs -->
                 <div class="register">
-                    <input name="Email" type="email" placeholder="Email" class="input"> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
+                    <input name="Email" type="email" placeholder="Email" class="input" required> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
                 </div>
                 
                 <div class="register">
-                    <input name="CompleteName" type="text" placeholder="Nome completo" class="input"> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
+                    <input name="CompleteName" type="text" placeholder="Nome completo" class="input" required> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
                 </div>
 
                 <div class="register">
-                    <input name="NickName" type="text" placeholder="Nome de usuário" class="input"> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
+                    <input name="UserName" type="text" placeholder="Nome de usuário" class="input" required> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
                 </div>
                 
                 <div class="register">
-                    <input name="Password" type="password" placeholder="Senha" class="input"> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
+                    <input name="Password" type="password" placeholder="Senha" class="input" minlength="5" maxlength="10" required> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
                 </div>
                 <!-- fim da parte dos inputs -->
 
                 <!-- começo do botão para cadastrar -->
                 <button type="submit" class="register-btn">Cadastre-se</button>
                 <!-- fim do botão para cadastrar -->
-
             </form>
 
             <div class="pos-form">
@@ -54,8 +53,8 @@
             <div class="app">
                 <p>Obtenha o aplicativo.</p>
                 <div class="images-app">
-                    <a href="https://apps.apple.com/br/app/instagram/id389801252"><img src="/img/app_store 1.png" alt="Obter o aplicativo pela App Store"></a> <!-- o "scr" é onde colocamos a imagem || o "alt" é onde descrevemos a imagem -->
-                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=pt_BR&gl=US"><img src="/img/google_play 1.png" alt="Obter o aplicativo pela Google Play"></a><!-- o "scr" é onde colocamos a imagem || o "alt" é onde descrevemos a imagem -->
+                    <a target="_blank" rel="Baixar Instagram no IOS" href="https://apps.apple.com/br/app/instagram/id389801252"><img src="/img/app_store 1.png" alt="Obter o aplicativo pela App Store"></a> <!-- o "scr" é onde colocamos a imagem || o "alt" é onde descrevemos a imagem -->
+                    <a target="_blank" rel="Baixar Instagram no Android" href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=pt_BR&gl=US"><img src="/img/google_play 1.png" alt="Obter o aplicativo pela Google Play"></a><!-- o "scr" é onde colocamos a imagem || o "alt" é onde descrevemos a imagem -->
                 </div>
             </div>
         </section>

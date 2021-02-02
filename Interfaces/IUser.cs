@@ -3,11 +3,11 @@ using InstaDev_G1_DT.Models;
 
 namespace InstaDev_G1_DT.Interfaces
 {
-    public interface IPageRegister
+    public interface IUser
     {
         // CRUD
-        void Create(PageRegister newRegister);
-        List<PageRegister> ReadAllItems();
+        void Create(User newUser);
+        List<User> ReadAllItems();
         void Update();
         void Delete();
     }
