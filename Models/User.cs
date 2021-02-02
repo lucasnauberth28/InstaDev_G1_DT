@@ -16,6 +16,7 @@ namespace InstaDev_G1_DT.Models
         public string UserName { get; set; } // O @ do usuário
         public string Password { get; set; } // Senha da conta do usuário
         private const string PATH = "Database/register.csv"; // criação da pasta Database que armazanerá os arquivos CSV
+        public string Image { get; set; }
 
         public User(){ // método construtor para criar os arquivos CSV
             CreateFolderAndFile(PATH); // método puxado de dentro da classe "InstaDevBase"
@@ -54,9 +55,9 @@ namespace InstaDev_G1_DT.Models
 
         public void Update(User userUpdate)
         {
-            List<string> lines = ReadAllLinesCSV(PATH);
+            List<User> lines = ReadAllLinesCSV(PATH);
             lines.RemoveAll(x => x.Split(";")[0] == userUpdate.IdUser.ToString());
-            lines.Add( PrepareLinesCSV(userUpdate) );
+            lines.Add( PrepareLinesCSV(userUpdate));
             RewriteCSV(PATH, lines);
         }
 

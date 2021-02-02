@@ -8,15 +8,18 @@
 
 body{
     background-color: white;
+    width: 100%;
 }
 
 /* MENU */
 
 .menu{
     width: 100%;
+    max-width: 2500px;
     height: 80px;
     align-items: center;
     box-shadow: 2px 2px 0px rgb(167, 163, 163, 0.3);
+    margin: 0 auto;
 }
 
 .nav{
@@ -24,7 +27,7 @@ body{
     width: 90%;
     height: 80px;
     display: flex;
-    max-width: 1400px;
+    max-width: 2500px;
     justify-content: space-around;
     align-items:center;
 
@@ -82,7 +85,12 @@ body{
     padding: 0px 10px;
     font-size: 24px 25px;
 }
-
+.perfil{
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    border: 2px #2686CC solid;
+}
 /* Aqui é a imagem de perfil */
 .perfil img{ 
     display: flex;
@@ -95,18 +103,18 @@ body{
 
 
 .infos{
-    margin-top: 10px;
+    margin-top:10px;
     height:600px;
-    width: 100%;
+    width:100%;
     display: flex;
 }
 
 .container{
-    width:71%;
+    width:80%;
     height:600px;
-   display: flex;
+    display:flex;
     max-width:1400px;
-    margin: 0 auto;
+    margin:0 auto;
    
 }
 
@@ -131,6 +139,13 @@ body{
     height: 60px;
     
     
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px #2686CC solid;
 }
 
 .perfilFoto img{
