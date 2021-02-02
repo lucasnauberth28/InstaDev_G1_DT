@@ -1,3 +1,4 @@
+using System;
 using InstaDev_G1_DT.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,8 @@ namespace InstaDev_G1_DT.Controllers
             newUser.CompleteName = registrationForm["CompleteName"];
             newUser.UserName = registrationForm["UserName"];
             newUser.Password = registrationForm["Password"];
+
+            newUser.IdUser = userModels.IdGenerator(); // o IdUser do usuário será igual ao método IdGenerator dentro do userModels || assim, será gerado toda vez que o método de Register for executado 
 
             userModels.Create(newUser);
             ViewBag.Users = userModels.ReadAllItems();

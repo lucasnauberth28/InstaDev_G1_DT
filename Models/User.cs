@@ -17,12 +17,17 @@ namespace InstaDev_G1_DT.Models
         public string Password { get; set; } // Senha da conta do usuário
         private const string PATH = "Database/register.csv"; // criação da pasta Database que armazanerá os arquivos CSV
 
+        Random idRandom = new Random(); // está instanciando a classe que está dentro do método de geração de IDs
         public User(){ // método construtor para criar os arquivos CSV
             CreateFolderAndFile(PATH); // método puxado de dentro da classe "InstaDevBase"
         }
         
         public string PrepareLinesCSV(User prepareLines){ // aqui será preparado o modo como será armazenado automaticamente as linhas dentro do CSV
-            return $"{prepareLines.Email};{prepareLines.CompleteName};{prepareLines.UserName};{prepareLines.Password}";
+            return $"{prepareLines.IdUser};{prepareLines.Email};{prepareLines.CompleteName};{prepareLines.UserName};{prepareLines.Password}";
+        }
+
+        public int IdGenerator(){ // esse método gerará números aleatórios de ID de usuário
+            return idRandom.Next(); // direcionará para dentro do método de Register
         }
 
         public void Create(User newUser){ // criará um novo usuário cadastrado no CSV (ou seja, uma nova linha no CSV)
@@ -36,13 +41,14 @@ namespace InstaDev_G1_DT.Models
             
             foreach(var item in infoData){ // o foreach ficará repetindo a função de "recolher" os dados que estão sendo consultados do infoData
                 string[] data = item.Split(";"); // o "data" é onde será memorizado onde cada dado está (para conseguir chamar pelos números [0], [1], [2] etc) || o Split(";") está separando as informações, entendendo que a cada ";" é um novo tipo de dado
-                
+
                 User user = new User(); // aqui apenas foi a classe sendo instanciada para possibilitar puxar os atributos dela(Email, CompleteName, Username e Password) e poder memorizar onde está cada dado nos números([1], [2], [3] etc)
-                
-                user.Email = data[0]; // aqui está começando a ser memorizado no "user" a posição que está cada dado
-                user.CompleteName = data[1];
-                user.UserName = data[2];
-                user.Password = data[3];
+
+                user.IdUser = Int32.Parse(data[0]);
+                user.Email = data[1]; // aqui está começando a ser memorizado no "user" a posição que está cada dado
+                user.CompleteName = data[2];
+                user.UserName = data[3];
+                user.Password = data[4];
 
                 users.Add(user); // aqui estamos adicionando o que foi instanciado para dentro da lista principal deste contexto
             }
@@ -53,5 +59,7 @@ namespace InstaDev_G1_DT.Models
         public void Update(){} // SEM FUNCIONALIDADE NESTA PÁGINA
 
         public void Delete(){} // SEM FUNCIONALIDADE NESTA PÁGINA
+
+
     }
 }
