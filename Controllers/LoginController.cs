@@ -7,15 +7,16 @@ namespace InstaDev_G1_DT.Controllers
     [Route("Login")]
     public class LoginController : Controller
     {
+        [Route("Logar")]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Route("Logar")]
+        [Route("Logando")]
         public IActionResult Logar(IFormCollection form)
         {
-            return LocalRedirect("~/");
+            return LocalRedirect("~/Login/Logar");
         }
     }
 }

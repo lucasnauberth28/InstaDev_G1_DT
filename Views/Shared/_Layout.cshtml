@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - InstaDev</title>
     <link href="//db.onlinewebfonts.com/c/6d32b8e06f40fb7698cfb714b9e7975d?family=BillabongW00-Regular" rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI" rel="stylesheet" type="text/css"/> @* Link adicionado pelo Apolinário (27.01.2021 | 16h50min) *@
-    <link rel="stylesheet" href="~/css/estilo.css" /> @* Pasta do CSS mudada para a "estilo.css" *@
+    <link rel="stylesheet" href="~/css/style.css"/> 
 </head>
 <body>
     <header>
@@ -28,16 +28,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Register">Cadastro</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logar">Login</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    
+    @RenderBody()
+
+
 
     <footer class="border-top footer text-muted">
         <div class="container">
@@ -50,3 +52,4 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+
