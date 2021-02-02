@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using InstaDev_G1_DT.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace InstaDev_G1_DT.Models
 {
@@ -15,6 +16,8 @@ namespace InstaDev_G1_DT.Models
         public string Email { get; set; } // Email do usuário
         public string UserName { get; set; } // O @ do usuário
         public string Password { get; set; } // Senha da conta do usuário
+        [TempData]
+        public string Message { get; set; }
         private const string PATH = "Database/register.csv"; // criação da pasta Database que armazanerá os arquivos CSV
 
         Random idRandom = new Random(); // está instanciando a classe que está dentro do método de geração de IDs
@@ -29,7 +32,7 @@ namespace InstaDev_G1_DT.Models
         public int IdGenerator(){ // esse método gerará números aleatórios de ID de usuário
             return idRandom.Next(); // direcionará para dentro do método de Register
         }
-
+        
         public void Create(User newUser){ // criará um novo usuário cadastrado no CSV (ou seja, uma nova linha no CSV)
             string[] dataToLines = {PrepareLinesCSV(newUser)}; // o dataToLines(string array) irá memorizar os dados que forem preenchidos no cadastro de acordo com o método PrepareLinesCSV(que vai preparar a forma das informações nas linhas do CSV)
             File.AppendAllLines(PATH, dataToLines); // o arquivo CSV(File) chama um método já presente da biblioteca do System.IO que tem a função de anexar as os dados preenchidos pelo usuário que estão memorizadas no dataToLines || dentro do método AppendAllLines tem o PATH, que é onde ele vai anexar esses novos dados de cadastro; e o dataToLines(dados para linhas), que são os dados memorizados que serão "lançados" para dentro do PATH

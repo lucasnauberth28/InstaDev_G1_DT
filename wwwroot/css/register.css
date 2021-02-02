@@ -95,6 +95,9 @@ main{ /* aqui mexeremos no básico do conteúdo principal da página */
 .input:focus{ /* esse ":focus" será responsável pela mudança dentro do input quando clicarmos nele (ou seja, darmos foco) */
     border: 1px solid var(--inputBorderClicked); /* quando focarmos em tal input, a borda mudará para essa e, ficará com 1px de "grossura" com uma cor mais escura */
 }
+.error{
+    color: #00e01e;
+}
 .register-btn{ /* aqui vamos mudar o botão de cadastrar */
     width: 300px; /* mudando a largura do botão para 300px */
     height: 35px; /* mudando a altura do botão para 30px */
