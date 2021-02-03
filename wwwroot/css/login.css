@@ -1,181 +1,147 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
-    background-color: #f2f2f2;
+:root {
+/* esse ":root" será uma "raiz" para podermos salvar cores e outras coisas */
+/* isso funciona como se fosse um "pote de tinta", temos aqui um pote de tinta branca-acinzentada que será usado no background dela, porém pode ser usada em outros lugares, mas não é muito recomendável por conta da organização */
+
+--mainBackground: #fafafa; /* cor de fundo e de dentro dos inputs */
+--squareBackground: #ffffff; /* cor das áreas de formulários, por exemplo, dentro de onde o usuário vai preencher seus dados(Cadastro) ou entrar na conta(Login) */
+--squareBorders: #dbdbdb; /* cor das bordas das áreas de formulário, por exemplo */
+--preFormLetters: #8e8e8e; /* cor das letras do pré formulário */
+--inputBordersNotClicked: #eeeeee; /* cor das bordas dos inputs quando "NÃO CLICADOS"*/
+--inputBorderClicked: #a7a7a7; /* cor das bordas dos inputs quando "CLICADOS" */
+--inputLetters: #8d9191; /* cor das letras que ficam dentro dos inputs especificando o que é para preencher dentro */
+--buttonsLetters: #ffffff; /* cor das letras de dentro do botão, por exemplo, de Cadastro e Login */
+--buttonsNotClicked: #0095f6; /* cor dos botões de cadastro e login ainda "NÃO CLICADOS" */
+--buttonsClicked: #4cb5f9; /* cor dos botões de cadastro e login ainda "CLICADOS" */
+--posFormLetters: #8b8d9b; /* cor das letras que estão pós formulário que NÃO SÃO HYPERLINKs */
+--posFormHyperLinkLetters: #898e8b; /* cor das letras que estão pós formulário que SÃO HYPERLINKs */
+--buttonQuestion: #0095f6; /* cor do "botão" de pergunta, por exemplo, "Conecte-se"(da página de Cadastro) e o "Cadastre-se"(da página de Login) */
+
+--titleFont: "BillabongW00-Regular", serif; /* fonte da logo "InstaDev" */
+--textFont: "Segoe UI", Tahoma, Verdana, sans-serif; /* fonte dos textos */
 }
 
-#conteudo {
-    margin-top: 162px;
-    background-color: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+body { /* fundo */
+background-color: var(--mainBackground);
 }
 
+#conteudo { /* centralização da primeira caixa de formulário */
+margin-top: 162px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
 
-.centraform {
-    background-color: white;
-  width:342px;
-  height: 380px;
-  background-color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-
+.centraform { /* primeira caixa de formulário */
+width: 350px;
+height: 380px;
+background-color: var(--squareBackground);
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid var(--squareBorders);
 }
 .centralizarlogo {
- 
- display: flex;
- justify-content: space-around;
+user-select: none;
+margin-bottom: 3em;
+display: flex;
+justify-content: space-around;
 }
 
-.erro{
-    color: #6c1fe9;
-    padding-left: 45px;
+.erro { /* erro se colocar o login errado */
+color: #ff0000;
+padding-left: 45px;
 }
 
-.input1 {
-   
-    width: 267px;
-    height: 35px;
-    margin-left: 38px;
-    margin-top: 50px;
-    background-color: #fafafa;
-    border:1px solid #dcdcdc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 11px;
-    color: #afafaf;
-    padding-left: 10px;
+.input { /* primeiro input */
+width: 267px;
+height: 35px;
+margin-left: 42px;
+margin-top: 5px;
+background-color: var(--mainBackground);
+border: 1px solid var(--inputBordersNotClicked);
+font-family: var(--textFont);
+font-size: 13px;
+color: var(--inputLetters);
+padding-left: 10px;
 }
-.input1:hover
-{
-    border:1px solid lightgray;
-}
-.input2 {
-    
-    width: 267px;
-    height: 35px;
-    margin-left: 38px;
-    margin-top: 9px;
-    background-color: #fafafa;
-    border:1px solid #dcdcdc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 11px;
-    color: #afafaf;
-    padding-left: 10px;
-}
-.input1:hover
-{
-    border:1px solid lightgray;
+.input:focus { /* focus do primeiro input */
+border: 1px solid var(--inputBorderClicked);
 }
 
-.botao {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13;
-    width: 267px;
-    height: 35px;
-    background-color:#2686cc;
-    padding: 9px 50px;
-    color: white;
-    margin-left: 38px;
-    margin-top: 9px;
-    border: none;
+.botao { /* botão de entrar */
+font-family: var(--textFont);
+font-weight: bolder;
+font-size: 15px;
+width: 267px;
+height: 35px;
+background-color: var(--buttonsNotClicked);
+border-radius: 6px;
+padding: 9px 50px;
+color: var(--squareBackground);
+margin-left: 42px;
+margin-top: 9px;
+border: 0;
+}
+.botao:focus{
+border: 0;
+background-color: var(--buttonsClicked);
 }
 
-.centralizarlink {
-
-    width: 342px;
-    height: 75px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
+.centralizarlink { /* segunda caixa de formulário */
+width: 350px;
+height: 75px;
+background-color: var(--squareBackground);
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid var(--squareBorders);
 }
 
-.centralizarlink a{
-    color: #2686cc;
-    text-decoration: none;
-}
-.refref {
-    margin-left: 60px;
-}
-
-.benditoou {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
+.centralizarlink a { /* hyperlink da segunda caixa do formulário */
+color: var(--buttonsNotClicked);
+text-decoration: none;
 }
 
 .esqueciasenha {
-    margin-left: 120px;
-    margin-top: 24px;
-    color: #2686cc;
+margin-left: 120px;
+margin-top: 24px;
 }
 
-.esqueciasenha a{
-    color: #2686cc;
-    text-decoration: none;
+.esqueciasenha a {
+color: var(--buttonsNotClicked);
+text-decoration: none;
 }
 
-/* .hr2 {
-    border-top: 50px;
-    border-top: medium double #CCC;
-    height: 1px;
-    overflow: visible;
-    padding: 0;
-    color: rgb(95, 48, 48);
-    text-align: center;
-  }
-  
-  .hr2::after {
-    content: "OU";
-    display: inline-block;
-    position: relative;
-    top: 30px;
-    font-size: 1.4em;
-    padding: 0 0.3em;
-    background: white;
-  } */
-
-  .testehr{
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin-top: 30px;
-  }
-  .testehr hr{
-      width: 100px;
-  }
-
-.centralizarcadastrese {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.testehr { /* linha com o OU */
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+margin-top: 30px;
 }
-.centrafoot {
+.testehr hr {
+width: 100px;
+}
+
+.centralizarcadastrese { /* centralizando a segunda caixa de formulário */
+margin-top: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.centrafoot { /* centralizando as img de download do instagram */
 display: flex;
 justify-content: center;
 align-items: flex-end;
- 
 }
-.frasenocentro {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.store {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+.frasenocentro { /* centralizando a frase "Obtenha o aplicativo." */
+margin-top: 20px;
+margin-bottom: 20px;
+display: flex;
+justify-content: center;
 }
