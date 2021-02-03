@@ -20,6 +20,9 @@ namespace InstaDev_G1_DT.Controllers
 
         public IActionResult Index()
         {
+            Publication publicationModel=new Publication();
+            ViewBag.Publication = publicationModel.ReadAllItens();
+           
             return View();
         }
 
