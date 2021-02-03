@@ -33,7 +33,7 @@ namespace InstaDev_G1_DT.Controllers
             ViewBag.Users = userModels.ReadAllItems();
 
             // localhost:5001/User/Register
-            return LocalRedirect("~/User/Register");
+            return LocalRedirect("~/Login/Logar");
         }
     }
 }

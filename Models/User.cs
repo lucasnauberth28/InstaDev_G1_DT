@@ -8,6 +8,8 @@ namespace InstaDev_G1_DT.Models
 {
     public class User:InstaDevBase, IUser
     {
+        [TempData]
+        public string Mensagem { get; set; }
         public int IdUser { get; set; } // Id de usuário
         public string CompleteName { get; set; } // Nome completo do usuário
         public string Photo { get; set; } // Foto de perfil do usuário
