@@ -13,6 +13,7 @@ namespace InstaDev_G1_DT.Controllers
             return View();
         }
 
+        [Route ("Comment")]
         public IActionResult Comment(IFormCollection registrationComment){ // método de comentar
             Comments newComment = new Comments(); // instanciamento da classe Comments da Models
             newComment.Message = registrationComment["Message"]; // aqui será realmente registrado qualquer mensagem que o usuário fazer numa publicação

@@ -1,3 +1,4 @@
+@using InstaDev_G1_DT.Models
 @{
     ViewData["Title"] = "Perfil";
 }
@@ -72,63 +73,42 @@
                     </div>
 
 
-
-                    <div class="button">
-
-                        <div class="heart-comment">
-                            <div class="Like">
-                                <img src="img/Vector (1).png" alt="Curtir">
+                    <div class="botao">
+                        <div class="content-txt">
+                            <div class="content">
+                                <i onclick="Toggle()" id="btn" class="far fa-heart"></i>
                             </div>
-                            <div class="Ballon">
-                                <img src="img/ballon.png" alt="Comentários">
-                            </div>
+                            <span class="numb"></span>
+                            <span class="text">Curtidas</span>
                         </div>
-                        <p class="curtidas">100 curtidas</p>
-                        <div class="container">
-                            <div class="users-comment">
-                                <h4>fausto_silva</h4>
-                                <p>Esse cara é fera bixo!!</p>
-                            </div>
-                            <div class="coracoes">
-                                <img src="img/Vector (1).png" alt="curtir">
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="users-comment">
-                                <h4>Marcos_Jeeves</h4>
-                                <p>thank you!</p>
-                            </div>
-                            <div class="coracoes">
-                                <img src="img/Vector (1).png" alt="curtir">
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="users-comment">
-                                <h4>Adriano_Stark</h4>
-                                <p>Quando eu adormecer, vou sonhar com você. É sempre você. </p>
-                            </div>
-                            <div class="coracoes">
-                                <img src="img/Vector (1).png" alt="curtir">
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="users-comment">
-                                <h4>Marcos_Jeeves</h4>
-                                <p>Um tapa na gostosa >:)!!! yes baby!</p>
-                            </div>
-                            <div class="coracoes">
-                                <img src="img/Vector (1).png" alt="curtir">
-                            </div>
-                        </div>
-
                     </div>
-
-
 
                     <div class="resto">
                         <p>Ver todos os 69 Comentários</p>
                     </div>
+                    @foreach (Comments comments in ViewBag.Comments)
+                    {
+                        <div class="coments">
+                            <div class="title">
+                                <h6>nome</h6>
+                            </div>
+                            <div class="txt">
+                                <p>@comments.Message</p>
+                                <p class="delet"><a class="delete" asp-controller="Profile" asp-action="Delete"
+                                        asp-route-id="@comments.IdComment"><img class="delete-img" src="img/lixo.png"></a>
+                                </p>
+                            </div>
+                        </div>
+                    }
 
+                    
+
+                    <div class="coments2">
+                        <form method="POST" action='@Url.Action("Comment")'>
+                            <input required name="Message" class="comentario" placeholder="Digite aqui" type="text">
+                            <button type="submit" class="bbtn">Enviar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
     </section>
