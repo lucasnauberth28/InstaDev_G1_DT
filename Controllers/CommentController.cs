@@ -19,7 +19,7 @@ namespace InstaDev_G1_DT.Controllers
             NewComment.IdComment        = Int32.Parse(form["IdComment"]);
             NewComment.Message          = form["Message"];
 
-            return LocalRedirect("~/");
+            return LocalRedirect("~/Perfil");
         }
     }
 }

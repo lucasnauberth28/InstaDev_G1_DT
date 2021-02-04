@@ -7,7 +7,7 @@ namespace InstaDev_G1_DT.Interfaces
     {
         // CRUD
         void Create(Comments newComment);
-        List<Comments> ReadAllItems();
+        List<Comments> ReadAllItens();
         void Update();
         void Delete(int id);
     }

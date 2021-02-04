@@ -20,7 +20,7 @@ namespace InstaDev_G1_DT.Models
             return $"{prepareLines.IdComment};{prepareLines.IdUser};{prepareLines.IdPublication};{prepareLines.Message}";
         }
         public void IdGenerator(Comments id){ // esse método gerará números aleatórios de ID
-            var list = ReadAllItems();
+            var list = ReadAllItens();
 
             if(list.Count > 0){ // se existir mais que zero, vai gerar um número aleatório que será o id
                 Random randomNumber = new Random();
@@ -39,7 +39,7 @@ namespace InstaDev_G1_DT.Models
             IdGenerator(newComment); // o IdGenerator fará o mesmo que fez com o id, só que com o newComment
         }
 
-        public List<Comments> ReadAllItems(){ // aqui será lido/interpretado todos os itens das linhas do CSV (IdComment, IdUser, IdPublication e Message)
+        public List<Comments> ReadAllItens(){ // aqui será lido/interpretado todos os itens das linhas do CSV (IdComment, IdUser, IdPublication e Message)
             List<Comments> comments = new List<Comments>(); // atributo da lista que poderá ser chamado no contexto
             string[] infoData = File.ReadAllLines(PATH); // infoData(dados de informação) é onde será consultado pelo File e com o seu método ReadAllLines(que já é presente da biblioteca System.IO) para logo logo ser separado cada dado do CSV em seu respectivo "lugar"
             
