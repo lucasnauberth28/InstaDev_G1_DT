@@ -8,7 +8,8 @@ namespace InstaDev_G1_DT.Controllers
     public class ProfileController:Controller
     {
         Comments commentModels = new Comments();
-        public IActionResult Profile(){
+        [Route("Perfil")]
+        public IActionResult Index(){
             ViewBag.Comments = commentModels.ReadAllItens();
             return View();
         }

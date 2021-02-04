@@ -32,22 +32,30 @@
 </head>
 
 <body>
-    <header>
-        <nav class="header">
-            <div class="lista">
-                <ul class="ul">
-                    <li class="li">
-                        <a class="teste" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
-                    </li>
-                    <li class="li">
-                        <a class="teste" asp-area="" asp-controller="User" asp-action="Register">Cadastro</a>
-                    </li>
-                    <li class="li">
-                        <a class="teste" asp-area="" asp-controller="Login" asp-action="Logar">Login</a>
-                    </li>
-                </ul>
+    <header class="menu">
+        <section class="nav">
+            <div class="logo">
+                <img src="~/img/Instadev.png" alt="Logo do Instadev" >
             </div>
-        </nav>
+
+            <div class="search"> 
+                <button class="submit-lupa" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <input type="text" placeholder="Pesquisar" class="search-input"/>
+
+            </div>
+
+            <div class="menu-btn">
+                    <i class="fas fa-home"></i>
+                    <i class="far fa-paper-plane"></i>
+                    <i class="far fa-compass"></i>
+                    <i class="far fa-heart"></i>
+                <div class="perfil1">
+                    <img src="img/thank-you 1.png" alt="Foto de perfil">
+                </div>
+            </div>
+        </section>
     </header>
 
     @RenderBody()
