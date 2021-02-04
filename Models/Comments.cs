@@ -13,7 +13,7 @@ namespace InstaDev_G1_DT.Models
         public int IdPublication { get; set; } // CORRIGIR: IdPublication - int id - FK || Id da publicação do comentário
         private const string PATH = "Database/Comentários.CSV";
 
-        Comments()
+        public Comments()
         {
             CreateFolderAndFile(PATH);
         }
@@ -63,7 +63,9 @@ namespace InstaDev_G1_DT.Models
 
         public void Delete(int id)
         {
-            throw new System.NotImplementedException();
+            List<string> Lines = ReadAllLinesCSV(PATH);
+            Lines.RemoveAll(x => x.Split(";")[0] == id.ToString());
+            RewriteCSV(PATH, Lines);
         }
 
     }
