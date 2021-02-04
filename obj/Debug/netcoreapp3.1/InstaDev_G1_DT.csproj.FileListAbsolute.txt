@@ -82,3 +82,39 @@ C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Inst
 C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.RazorAssemblyInfo.cs
 C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.dll
 C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.pdb
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\InstaDev_G1_DT.exe
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\InstaDev_G1_DT.deps.json
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\InstaDev_G1_DT.runtimeconfig.json
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\InstaDev_G1_DT.runtimeconfig.dev.json
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\InstaDev_G1_DT.dll
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\InstaDev_G1_DT.pdb
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\InstaDev_G1_DT.Views.dll
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\bin\Debug\netcoreapp3.1\InstaDev_G1_DT.Views.pdb
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.csprojAssemblyReference.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.AssemblyInfoInputs.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.AssemblyInfo.cs
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.csproj.CoreCompileInputs.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.RazorAssemblyInfo.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.RazorAssemblyInfo.cs
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\staticwebassets\InstaDev_G1_DT.StaticWebAssets.Manifest.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\staticwebassets\InstaDev_G1_DT.StaticWebAssets.xml
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\scopedcss\bundle\InstaDev_G1_DT.styles.css
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.TagHelpers.input.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.TagHelpers.output.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.RazorCoreGenerate.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.RazorTargetAssemblyInfo.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.RazorTargetAssemblyInfo.cs
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.Views.pdb
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.dll
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.pdb
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.genruntimeconfig.cache
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.csproj.CopyComplete
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\Home\Feed.cshtml.g.cs
+C:\Users\fic\Desktop\mlhkmghoj hg\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs

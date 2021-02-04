@@ -3,11 +3,13 @@
 }
 
 <html lang="pt-br">
-    <head>
- 
 
-    </head>
-    <body>
+<head>
+
+
+</head>
+
+<body>
     <section>
         <div class="storiesperfil">
             <div class="stories">
@@ -78,48 +80,17 @@
                 </h1>
             </div>
             <div class="botoes-postar">
-                <div class="desc">
-                    <input type="text" name="" id="">
-                </div>
-                <button class="b-img">Escolha a imagem</button>
-                <button class="b-img2">Postar</button>
+                <form method="POST" action='@Url.Action("Publicar")'>
+                    <div class="desc">
+                        <input type="text" name="Subtitle" id="">
+                    </div>
+
+                    <input type="file" value="Escolha a imagem" nome="Image" class="b-img">
+                    <input type="submit" class="b-img2">Postar</input>
+                </form>
             </div>
         </div>
-        <div class="post">
-            <div class="Fotop">
-                <img src="imagens/gabigordo 2.svg" alt="Perfil gabigordo">
-                <div class="text-fotop">
-                    <h4>
-                       gabigordo 
-                    </h4>
-                    <p>Flamengo, RJ</p>
-                </div>
-            </div>
-            <img src="imagens/post-gabigordo 1.svg" alt="Perfil gabigordo">
-            <div class="comments">
-            <i class="far fa-heart"></i>
-            <i class="far fa-comment-dots"></i>
-                <div class="comentar">
-                <p>Comentar</p>
-                </div>
-            </div>
-            <h1 class="curtidas">
-                2077 curtidas
-            </h1>
-            <div class="comentarios">
-                <div class="Descricao">
-                    <h1>gabigordo</h1>
-                    <p><a href="#">#flamengo</a> Amo vocês mil milhões! </p>
-                </div>
-                <div class="comentario">
-                    <h1>Yes_baby</h1>
-                    <p> Thank You</p>
-                </div>
-                <div class="comentario">
-                    <h1>King_pelé</h1>
-                    <p> Esses são bons de bola, entende? </p>
-                </div>
-            </div>
-        </div>
+
+
     </section>
-    </body>
+</body>

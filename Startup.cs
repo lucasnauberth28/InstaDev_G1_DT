@@ -50,7 +50,7 @@ namespace InstaDev_G1_DT
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Feed}/{action=Index}/{id?}");
             });
         }
     }

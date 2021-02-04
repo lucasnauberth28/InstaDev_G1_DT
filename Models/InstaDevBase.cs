@@ -34,7 +34,7 @@ namespace InstaDev_G1_DT.Models
             }
             
         }
-        public void RewriteCSV(string path, list<string> line)
+        public void RewriteCSV(string path, List<string> line)
             {
                 using(StreamWriter ouput= new StreamWriter(path))
                 {
