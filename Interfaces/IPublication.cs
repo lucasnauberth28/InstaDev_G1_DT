@@ -7,7 +7,8 @@ namespace InstaDev_G1_DT.Interfaces
     {
         void Create(Publication p);
         List<Publication> ReadAllItens();
-        void Update();
+        void Update(Publication p);
         void Delete(int Id);
+        void curtir( int Likes, int contador);
     }
 }

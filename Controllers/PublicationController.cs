@@ -11,9 +11,5 @@ namespace InstaDev_G1_DT.Controllers
         Publication pubModels= new Publication();
 
         
-         public IActionResult Index(){
-           // ViewBag.Publication =pubModels.ReadAllItens();
-            return View();
         }
     }
-}

@@ -73,3 +73,12 @@ C:\Users\288\Desktop\sla\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.d
 C:\Users\288\Desktop\sla\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.pdb
 C:\Users\288\Desktop\sla\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.genruntimeconfig.cache
 C:\Users\288\Desktop\sla\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.csproj.CopyComplete
+C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.csprojAssemblyReference.cache
+C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.AssemblyInfoInputs.cache
+C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.AssemblyInfo.cs
+C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.csproj.CoreCompileInputs.cache
+C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.RazorAssemblyInfo.cache
+C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.RazorAssemblyInfo.cs
+C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.dll
+C:\Users\288\Desktop\hgcfghfgthyrhdd\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.pdb

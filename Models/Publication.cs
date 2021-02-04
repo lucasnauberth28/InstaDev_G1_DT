@@ -19,21 +19,23 @@ namespace InstaDev_G1_DT.Models
         }
         public string PrepareLinesCSV(Publication p)
         {
-            return $"{p.IdPublication};{p.Subtitle};{p.Image}";
+            return $"{p.IdUser};{p.IdPublication};{p.Subtitle};{p.Image};{p.Likes}";
         }
         public void Create(Publication newPublication)
         {
             string[]line = {PrepareLinesCSV(newPublication)};
             File.AppendAllLines(PATH, line);
         }
-        public void Update()
+        public void Update(Publication p)
         {
-            throw new System.NotImplementedException();
+            list<string> lines= ReadAllLinesCSV(PATH);
+            lines.RemoveAll(x=>x.Split(";")[0]==p.IdPublication.ToString());
+            lines.Add(Prepare(p));
         }
 
         public void Delete(int Id)
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public List<Publication> ReadAllItens()
@@ -50,11 +52,19 @@ namespace InstaDev_G1_DT.Models
                 Publication publication = new Publication();
 
                 publication.IdPublication   = int.Parse(Lines[0]);
-                publication.Subtitle        = Lines[1];
-                publication.Image           = Lines[2];
-
+                 publication.IdUser   = int.Parse(Lines[1]);
+                publication.Subtitle        = Lines[2];
+                publication.Image           = Lines[3];
+                publication.Likes           =int.Parse(Lines[4]);
+            publications.Add(publication);
             }
             return publications;
+        }
+
+        public void curtir(int Curtir, int contador)
+        {
+             contador=0;
+            Curtir++;
         }
     }
 }
