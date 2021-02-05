@@ -33,7 +33,9 @@ namespace InstaDev_G1_DT.Controllers
             // e salvamos no objeto novaEquipe
             Publication newPub = new Publication();
             newPub.IdPublication = pubModels.idGPublication();
-            
+            newPub.Subtitle     =   form["Subtitle"];
+            newPub.Image  =   form["Image"];
+
 
             // Inicio uploud
             if (form.Files.Count > 0)
@@ -41,7 +43,7 @@ namespace InstaDev_G1_DT.Controllers
                 //Se sim,
                 //Armazenamos o arquivo na variável file
                 var file = form.Files[0];
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Pubs");
 
                 // Verificamos se a pasta Equipes não existe
                 if (!Directory.Exists(folder))

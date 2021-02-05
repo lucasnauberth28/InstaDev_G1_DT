@@ -192,3 +192,5 @@ C:\Users\FIC\Desktop\Regis\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT
 C:\Users\FIC\Desktop\Regis\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.pdb
 C:\Users\FIC\Desktop\Regis\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.genruntimeconfig.cache
 C:\Users\FIC\Desktop\Regis\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.csproj.CopyComplete
+C:\Users\288\Desktop\InstaDev\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\288\Desktop\InstaDev\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs
