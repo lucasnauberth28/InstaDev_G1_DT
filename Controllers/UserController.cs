@@ -50,10 +50,10 @@ namespace InstaDev_G1_DT.Controllers
            
         }
 
-        [Route ("Edit")]
+        [Route ("EditProfile")]
         public IActionResult EditProfile(){
             ViewBag.Users = userModels.ReadAllItems();
-            return View();
+            return LocalRedirect("~/EditProfile");
         }
     }
 }
