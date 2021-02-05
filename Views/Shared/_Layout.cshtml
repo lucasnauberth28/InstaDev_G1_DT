@@ -1,45 +1,56 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Seja bem-vindo(a)</title>
-        <link rel="stylesheet" href="css/feed.css">
-        <script src="https://kit.fontawesome.com/88f063c67b.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InstaDev</title>
+    <link href="//db.onlinewebfonts.com/c/6d32b8e06f40fb7698cfb714b9e7975d?family=BillabongW00-Regular" rel="stylesheet"
+        type="text/css" />
+    <link href="//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI" rel="stylesheet"
+        type="text/css" /> @* Link adicionado pelo Apolinário (27.01.2021 | 16h50min) *@
+
+    @switch (@ViewData["Title"])
+    {
+        case "Cadastro":
+            <link rel="stylesheet" href="~/css/register.css" /> @* Pasta do CSS mudada para a "estilo.css" *@
+            break;
+
+        case "Login":
+            <link rel="stylesheet" href="~/css/login.css" />
+            break;
+
+        default:
+            break;
+    }
+
 </head>
+
 <body>
-      <header class="menu">
-        <section class="nav">
-            <div class="logo">
-                <img src="imagens/Instadev (1).svg" alt="Logo do Instadev" >
-            </div>
-
-            <div class="search">
-                <i class="fas fa-search"></i>
-                <p>Pesquisar</p>
-            </div>
-
-            <div class="menu-btn">
-                    <i class="fas fa-home"></i>
-                    <i class="far fa-paper-plane"></i>
-                    <i class="far fa-compass"></i>
-                    <i class="far fa-heart"></i>
-                <div class="perfil">
-                    <img src="imagens/thank-you 1.png" alt="Foto de perfil">
-                </div>
+    <header>
+        <nav class="header">
+            <div class="lista">
+                <ul class="ul">
+                    <li class="li">
+                        <a class="teste" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+                    </li>
+                    <li class="li">
+                        <a class="teste" asp-area="" asp-controller="User" asp-action="Register">Cadastro</a>
+                    </li>
+                    <li class="li">
+                        <a class="teste" asp-area="" asp-controller="Login" asp-action="Logar">Login</a>
+                    </li>
+                </ul>
             </div>
         </section>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-   
+    @RenderBody()
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
+
 </html>
