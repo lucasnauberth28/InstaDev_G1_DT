@@ -1,0 +1,85 @@
+@{
+    ViewData["Title"] = "EditProfile";
+}
+
+    <body>
+        <header class="menu">
+            <section class="nav">
+                <div class="logo">
+                    <img src="/imgEdit/Instadev.svg" alt="Logo do Instadev" >
+                </div>
+
+                <div class="search"> 
+                    <button class="submit-lupa" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" placeholder="Pesquisar" class="search-input"/>
+                   
+                </div>
+
+                <div class="menu-btn">
+                        <i class="fas fa-home"></i>
+                        <i class="far fa-paper-plane"></i>
+                        <i class="far fa-compass"></i>
+                        <i class="far fa-heart"></i>
+                    <div class="perfil">
+                        <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfil">
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <main class="infos">
+            <section class="container">
+                
+                    <div class="title">
+                        <p>Editar Perfil</p>
+                    </div>
+
+                    <div class="opcoes">
+                        <div class="perfilFoto">
+                            <div class="circle">
+                            <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfi">
+                            </div>
+                            <div class="textFoto">
+                                <p>yes_baby</p>
+                                <label for="files" class="btn-img">Alterar foto de perfil</label>
+                                <input id="files" style="visibility:hidden;" type="file">
+                            </div>
+                        </div>
+                        <div class="edicoes">
+                            <div class="name">
+                                <h2>Nome</h2>
+                                <div class="text">
+                                    <input type="text" name="Name">
+                                    <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual<br> 
+                                        você é conhecido: seu nome completo, apelido ou nome comercial.</p>
+
+                                    <h3>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</h3>
+                                </div>
+                            </div>
+                            <div class="nick">
+                                <h2>Nome de usuário</h2>
+                                <div class="text">
+                                    <input type="text" name="Nick">
+                                    <p>Na maioria dos casos, você poderá alterar seu nome de usuário<br> 
+                                        novamente para nascimento_tr por mais 14 dias.</p>
+                                </div>
+                            </div>
+                            <div class="email">
+                                <h2>Email</h2>
+                                <div class="text">
+                                    <input type="text" name="Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="botao">
+                            <a asp-action="EditProfile" asp-controller="User" class="btn">Enviar</a>
+                            <a asp="#" class="btn">Sair</a>
+                            <a href="#" class="desative">Desativar minha conta definitivamente</a>
+                        </div>
+                    </div>
+            </section>
+        </main>
+    </body>
+</html>

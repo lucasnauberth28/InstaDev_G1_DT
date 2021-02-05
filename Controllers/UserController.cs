@@ -27,13 +27,33 @@ namespace InstaDev_G1_DT.Controllers
             newUser.UserName = registrationForm["UserName"];
             newUser.Password = registrationForm["Password"];
 
-            newUser.IdUser = userModels.IdGenerator(); // o IdUser do usuário será igual ao método IdGenerator dentro do userModels || assim, será gerado toda vez que o método de Register for executado 
-
             userModels.Create(newUser);
             ViewBag.Users = userModels.ReadAllItems();
 
             // localhost:5001/User/Register
             return LocalRedirect("~/Login/Logar");
+        }
+
+        [Route ("EditProfile")]
+        
+        public IActionResult EditProfile(IFormCollection profileEdited){
+            User edited = new User();
+            edited.CompleteName = profileEdited["Name"];
+            edited.UserName = profileEdited["Nick"];
+            edited.Email = profileEdited["Email"];
+
+            userModels.Update(edited);
+            ViewBag.Users = userModels.ReadAllItems();
+
+            // localhost:5001/User/EditProfile
+            return LocalRedirect("~/User/EditProfile");
+           
+        }
+
+        [Route ("Edit")]
+        public IActionResult EditProfile(){
+            ViewBag.Users = userModels.ReadAllItems();
+            return View();
         }
     }
 }

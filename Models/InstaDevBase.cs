@@ -34,11 +34,12 @@ namespace InstaDev_G1_DT.Models
             }
         }
 
-        public void ReWriteItemsCSV(string path, List<string> lines){ // método para reescrever/atualizar os "itens" dentro do CSV
-            // o StreamWriter será responsável a escrever o texto dado de uma maneira específica(dentro de um "molde", tipo a localização com o [0], [1] etc) || o StreamWriter é uma classe da System.IO
-            using(StreamWriter pencilEraser = new StreamWriter(path)){ // o "pencilEraser"(lápis borracha) é o atributo que foi instanciado da classe StreamWriter e que "apagará" a informação do item antigo e "escreverá" a nova informação no mesmo item apagado || o StreamWriter está "atuando" dentro da PATH, que é onde está o CSV || o "using" vai abrir e fechar o arquivo e fará a leitura (e nesse caso, a alteração)
-                foreach(var item in lines){ // ocorrerá uma verificada nos itens do CSV, se caso em um dos itens ter alguma alteração no "item"...
-                    pencilEraser.Write(item + "\n"); // o pencilEraser vai usar o seu método(que é um método do StreamWriter) Write(escrever) que vai alterar o item e vai pular uma linha com o "\n"
+        public void RewriteCSV(string PATH, List<string> lines){// o StreamWriter vai escrever as informações do CSV
+            using(StreamWriter output = new StreamWriter(PATH)) // Perguntar pro Saulo a utilidade de output
+            {
+                foreach (var item in lines) 
+                {
+                    output.Write(item + "\n");
                 }
             }
         }

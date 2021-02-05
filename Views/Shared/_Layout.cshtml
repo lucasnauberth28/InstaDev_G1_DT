@@ -10,11 +10,24 @@
     <link href="//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI" rel="stylesheet"
         type="text/css" /> @* Link adicionado pelo Apolinário (27.01.2021 | 16h50min) *@
 
+    <link href="//db.onlinewebfonts.com/c/6d32b8e06f40fb7698cfb714b9e7975d?family=BillabongW00-Regular" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI" rel="stylesheet" type="text/css"/> @* Link adicionado pelo Apolinário (27.01.2021 | 16h50min) *@
+    @switch (@ViewData["Title"])
+    {
+        case "Cadastro":
+            <link rel="stylesheet" href="~/css/estilo.css" /> @* Pasta do CSS mudada para a "estilo.css" *@
+            break;
+
+        case "EditProfile":
+            <link rel="stylesheet" href="~/css/EditProfile.css" /> 
+            <script src="https://kit.fontawesome.com/88f063c67b.js" crossorigin="anonymous"></script>
+            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     @switch (@ViewData["Title"])
     {
         case "Cadastro":
             <link rel="stylesheet" href="~/css/register.css" /> @* Pasta do CSS mudada para a "estilo.css" *@
             break;
+
 
         case "Login":
             <link rel="stylesheet" href="~/css/login.css" />
@@ -23,12 +36,14 @@
         case "Perfil":
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
             <link rel="stylesheet" href="~/css/profile.css">
+        case "Home":
+            <link rel="stylesheet" href="~/css/site.css" />
+
             break;
 
         default:
             break;
-    }
-
+    }  
 </head>
 
 <body>
@@ -59,10 +74,9 @@
     </header>
 
     @RenderBody()
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
-</body>
+    </body>
 </html>
