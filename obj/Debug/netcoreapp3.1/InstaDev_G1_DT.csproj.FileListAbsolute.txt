@@ -152,3 +152,4 @@ C:\Users\Saga\Desktop\InstaDev Project\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\In
 C:\Users\Saga\Desktop\InstaDev Project\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.genruntimeconfig.cache
 C:\Users\Saga\Desktop\InstaDev Project\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\InstaDev_G1_DT.csproj.CopyComplete
 >>>>>>> 8ce17d782b35acc20e88322ac273f5479efaf6ec
+C:\Users\jhony\Desktop\repo_github\InstaDev_G1_DT\obj\Debug\netcoreapp3.1\Razor\Views\User\EditProfile.cshtml.g.cs

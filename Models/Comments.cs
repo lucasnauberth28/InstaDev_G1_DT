@@ -62,7 +62,7 @@ namespace InstaDev_G1_DT.Models
         {
             List<string> lines = ReadAllLinesCSV(PATH); // todas as informações lidas pelo ReadAllLinesCSV serão guardadas na Lista "lines"
             lines.RemoveAll(item => item.Split(";")[0] == id.ToString()); // as informações da Lista lines serão separadas de acordo com o id em sua localização específica dentro do CSV([0])
-            ReWriteItemsCSV(PATH, lines); // assim que encontrado, aquela linha que foi apaga será recriada com o ReWriteItemsCSV que pulará para a próxima linha
+            RewriteCSV(PATH, lines); // assim que encontrado, aquela linha que foi apaga será recriada com o ReWriteItemsCSV que pulará para a próxima linha
         }
 
         public void Update(){} // SEM UTILIDADE NO MOMENTO
