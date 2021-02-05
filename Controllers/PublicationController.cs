@@ -9,12 +9,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InstaDev_G1_DT.Controllers
 {
-    [Route("Feed")]
+[Route("Home")]
+
     public class PublicationController : Controller
     {
         Publication pubModels = new Publication();
 
-        [Route("Listar")]
+       [Route("Index")]
         public IActionResult Index()
         {
             // Equipe idAutomatico = new Equipe();
@@ -23,7 +24,7 @@ namespace InstaDev_G1_DT.Controllers
             ViewBag.publications = pubModels.ReadAllItens();
             return View();
         }
-        [Route("Cadastrar")]
+        [Route("Publicar")]
         public IActionResult Publicar(IFormCollection form)
         {
             // Criamos uma nova instância de Equipe
@@ -70,14 +71,14 @@ namespace InstaDev_G1_DT.Controllers
             pubModels.Create(pubModels);
             ViewBag.Equipes = pubModels.ReadAllItens();
 
-            return LocalRedirect("~/Feed/Listar");
+            return LocalRedirect("~/Home/Index");
         }
-        [Route("{id}")]
+        [Route("Delete")]
         public IActionResult Delete(int id)
         {
             pubModels.Delete(id);
             ViewBag.Publications=pubModels.ReadAllItens();
-            return LocalRedirect("~/Feed/Listar");
+            return LocalRedirect("~/Home/Delete");
         }
     }
 
