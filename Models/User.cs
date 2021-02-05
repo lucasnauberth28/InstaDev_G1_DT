@@ -61,7 +61,7 @@ namespace InstaDev_G1_DT.Models
 
         public void Update(User userUpdate)
         {
-            List<User> lines = ReadAllLinesCSV(PATH);
+            List<string> lines = ReadAllLinesCSV(PATH);
             lines.RemoveAll(x => x.Split(";")[0] == userUpdate.IdUser.ToString());
             lines.Add( PrepareLinesCSV(userUpdate));
             RewriteCSV(PATH, lines);

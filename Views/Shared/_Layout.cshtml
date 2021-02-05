@@ -1,13 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - InstaDev</title>
-    <link href="//db.onlinewebfonts.com/c/6d32b8e06f40fb7698cfb714b9e7975d?family=BillabongW00-Regular" rel="stylesheet" type="text/css"/>
-    <link href="//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI" rel="stylesheet" type="text/css"/> @* Link adicionado pelo Apolinário (27.01.2021 | 16h50min) *@
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - InstaDev</title>
+        <link href="//db.onlinewebfonts.com/c/6d32b8e06f40fb7698cfb714b9e7975d?family=BillabongW00-Regular" rel="stylesheet" type="text/css"/>
+        <link href="//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI" rel="stylesheet" type="text/css"/> @* Link adicionado pelo Apolinário (27.01.2021 | 16h50min) *@
 
-<<<<<<< HEAD
     @switch (@ViewData["Title"])
     {
         case "Cadastro":
@@ -18,34 +17,15 @@
             <link rel="stylesheet" href="~/css/EditProfile.css" /> 
             <script src="https://kit.fontawesome.com/88f063c67b.js" crossorigin="anonymous"></script>
             <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-=======
-
-    @switch (@ViewData["Title"])
-    {
-        case "Cadastro":
-            <link rel="stylesheet" href="~/css/register.css" /> @* Pasta do CSS mudada para a "estilo.css" *@
-            break;
-
-        case "Home":
-            <link rel="stylesheet" href="~/css/site.css" />
->>>>>>> 2627b4d8c5d262c25f0d63670bb7eae29ac73813
-            break;
-
-        default:
             break;
     }
-<<<<<<< HEAD
-
-=======
+    </head>
+    <body>
+        <div>@RenderBody()</div>
     
->>>>>>> 2627b4d8c5d262c25f0d63670bb7eae29ac73813
-</head>
-<body>
-    <div>@RenderBody()</div>
-    
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
-</body>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+    </body>
 </html>
