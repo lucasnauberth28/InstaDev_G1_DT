@@ -71,17 +71,19 @@ namespace InstaDev_G1_DT.Models
                 //obejto publicação criado
                 Publication publication = new Publication();
 
-                publication.IdPublication = int.Parse(Lines[0]);
-                publication.IdUser = int.Parse(Lines[1]);
+                publication.IdPublication = Int32.Parse(Lines[0]);
+                publication.IdUser = Int32.Parse(Lines[1]);
                 publication.Subtitle = Lines[2];
                 publication.Image = Lines[3];
-                publication.Likes = int.Parse(Lines[4]);
+                publication.Likes = Int32.Parse(Lines[4]);
 
                 publications.Add(publication);
 
             }
             return publications;
         }
+
+        
 
 
 
