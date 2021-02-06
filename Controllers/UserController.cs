@@ -20,7 +20,7 @@ namespace InstaDev_G1_DT.Controllers
 
         // localhost:5001/User/New
         [Route ("New")]
-        public IActionResult Register(IFormCollection registrationForm){ // o IActionResult e o IFormCollection fazem parte de bibliotecas do AspNetCore
+        public IActionResult Registration(IFormCollection registrationForm){ // o IActionResult e o IFormCollection fazem parte de bibliotecas do AspNetCore
             User newUser = new User();
             newUser.Email = registrationForm["Email"];
             newUser.CompleteName = registrationForm["CompleteName"];
@@ -33,7 +33,7 @@ namespace InstaDev_G1_DT.Controllers
             ViewBag.Users = userModels.ReadAllItems();
 
             // localhost:5001/User/Register
-            return LocalRedirect("~/Login/Logar");
+            return LocalRedirect("~/");
         }
     }
 }
