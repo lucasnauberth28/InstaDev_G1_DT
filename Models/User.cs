@@ -63,12 +63,12 @@ namespace InstaDev_G1_DT.Models
 
         public void Update(User userUpdate)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Delete(int IdUser)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

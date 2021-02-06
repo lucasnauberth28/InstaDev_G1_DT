@@ -34,9 +34,9 @@ namespace InstaDev_G1_DT.Controllers
             return LocalRedirect("~/Login/Logar");
         }
 
-        [Route ("EditProfile")]
+        [Route ("Edit")]
         
-        public IActionResult EditProfile(IFormCollection profileEdited){
+        public IActionResult Edit(IFormCollection profileEdited){
             User edited = new User();
             edited.CompleteName = profileEdited["Name"];
             edited.UserName = profileEdited["Nick"];
@@ -46,14 +46,14 @@ namespace InstaDev_G1_DT.Controllers
             ViewBag.Users = userModels.ReadAllItems();
 
             // localhost:5001/User/EditProfile
-            return LocalRedirect("~/User/EditProfile");
+            return LocalRedirect("~/EditProfile");
            
         }
 
         [Route ("EditProfile")]
         public IActionResult EditProfile(){
             ViewBag.Users = userModels.ReadAllItems();
-            return LocalRedirect("~/EditProfile");
+            return View();
         }
     }
 }

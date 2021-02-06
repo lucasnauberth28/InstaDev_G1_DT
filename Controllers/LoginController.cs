@@ -38,6 +38,7 @@ namespace InstaDev_G1_DT.Controllers
             // Redirecionamos o usuário logado caso encontrado
             if (logado != null)
             {
+                HttpContext.Session.SetString("IdUser", logado.Split(";")[0]);
                 HttpContext.Session.SetString("E-mail", logado.Split(";")[1]);
                 return LocalRedirect("~/User/Register");
             }

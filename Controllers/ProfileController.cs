@@ -8,7 +8,6 @@ namespace InstaDev_G1_DT.Controllers
     public class ProfileController:Controller
     {
         Comments commentModels = new Comments();
-        [Route("Perfil")]
         public IActionResult Index(){
             ViewBag.Comments = commentModels.ReadAllItens();
             return View();
@@ -17,8 +16,8 @@ namespace InstaDev_G1_DT.Controllers
         [Route ("Comment")]
         public IActionResult Comment(IFormCollection registrationComment){ // método de comentar
             Comments newComment = new Comments(); // instanciamento da classe Comments da Models
-            newComment.Message = registrationComment["Message"]; // aqui será realmente registrado qualquer mensagem que o usuário fazer numa publicação
-
+            newComment.Message  = registrationComment["Message"]; // aqui será realmente registrado qualquer mensagem que o usuário fazer numa publicação
+            newComment.IdUser   = int.Parse(HttpContext.Session.GetString("IdUser"));
             commentModels.Create(newComment); // aqui será gerado o ID para o comentário
             ViewBag.Comments = commentModels.ReadAllItens(); // o commentModels que estava com o ID e a mensagem do comentário será guardado dentro da ViewBag Comments
 

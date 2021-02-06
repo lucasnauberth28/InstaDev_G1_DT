@@ -198,8 +198,8 @@
     margin-bottom: 20px;
 }
 .heart-comment{
+    width: 400px;
     display: flex;
-    flex-direction: initial;
     margin-right: 50px;
     align-items: baseline;
 }
@@ -210,7 +210,6 @@
 .Ballon img{
     width: 23px;
     height: 20px;
-    padding-left: 10px;
 }
 .botao{
     padding-top: 10px;
@@ -304,6 +303,7 @@
 .delete-img{
     width: 100%;
     transition: 0.5s;
+    
 }
 .delet{
     /* background-color: red; */

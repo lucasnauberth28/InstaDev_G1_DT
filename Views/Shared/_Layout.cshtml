@@ -10,8 +10,10 @@
     <link href="//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI" rel="stylesheet"
         type="text/css" /> @* Link adicionado pelo Apolinário (27.01.2021 | 16h50min) *@
 
-    <link href="//db.onlinewebfonts.com/c/6d32b8e06f40fb7698cfb714b9e7975d?family=BillabongW00-Regular" rel="stylesheet" type="text/css"/>
-    <link href="//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI" rel="stylesheet" type="text/css"/> @* Link adicionado pelo Apolinário (27.01.2021 | 16h50min) *@
+    <link href="//db.onlinewebfonts.com/c/6d32b8e06f40fb7698cfb714b9e7975d?family=BillabongW00-Regular" rel="stylesheet"
+        type="text/css" />
+    <link href="//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI" rel="stylesheet"
+        type="text/css" /> @* Link adicionado pelo Apolinário (27.01.2021 | 16h50min) *@
     @switch (@ViewData["Title"])
     {
         case "Cadastro":
@@ -19,51 +21,49 @@
             break;
 
         case "EditProfile":
-            <link rel="stylesheet" href="~/css/EditProfile.css" /> 
+            <link rel="stylesheet" href="~/css/EditProfile.css" />
             <script src="https://kit.fontawesome.com/88f063c67b.js" crossorigin="anonymous"></script>
             <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
             break;
         case "Login":
             <link rel="stylesheet" href="~/css/login.css" />
             break;
-        
+
         case "Perfil":
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
             <link rel="stylesheet" href="~/css/profile.css">
             break;
         case "Home":
             <link rel="stylesheet" href="~/css/site.css" />
-
             break;
 
         default:
             break;
-    }  
+    }
 </head>
 
 <body>
     <header class="menu">
         <section class="nav">
             <div class="logo">
-                <img src="~/img/Instadev.png" alt="Logo do Instadev" >
+                <img src="/imgEdit/Instadev.svg" alt="Logo do Instadev">
             </div>
 
-            <div class="search"> 
+            <div class="search">
                 <button class="submit-lupa" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
-                <input type="text" placeholder="Pesquisar" class="search-input"/>
+                <input type="text" placeholder="Pesquisar" class="search-input" />
 
             </div>
 
             <div class="menu-btn">
-                    <i class="fas fa-home"></i>
-                    <i class="far fa-paper-plane"></i>
-                    <i class="far fa-compass"></i>
-                    <i class="far fa-heart"></i>
-                <div class="perfil1">
-                    <img src="img/thank-you 1.png" alt="Foto de perfil">
+                <i class="fas fa-home"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <div class="perfil">
+                    <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfil">
                 </div>
             </div>
         </section>
@@ -74,5 +74,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
-    </body>
+</body>
+
 </html>

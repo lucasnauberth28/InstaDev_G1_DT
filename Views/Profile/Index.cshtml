@@ -3,15 +3,16 @@
 }
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="~/Css/Style.css">
+    <link rel="stylesheet" href="~/Css/Profile.css">
     <title>Tela de Perfil</title>
 </head>
+
 <body>
-    
     <main>
         <section class="biografia">
             <div class="bio">
@@ -21,15 +22,16 @@
 
                 <div class="descricao-perfil">
                     <h2>yes_baby</h2>
-                    <div class= "pss">
-                        <p>1 Publicações</p> 
-                        <a href="#">100 seguindo</a> 
+                    <div class="pss">
+                        <p>1 Publicações</p>
+                        <a href="#">100 seguindo</a>
                         <a href="#">2 seguidores</a>
-                    </div>                        
+                    </div>
                     <div class="edicao">
-                        <h4>Marcos Jeeves</h4>                                                  
-                        <a asp-controller= "~/User/EditProfile" asp-action= "Index">Editar perfil</a>
-                    </div>                                        
+                        <h4>Marcos Jeeves</h4>
+                        <a asp-area="Direcionamento para edição de Perfil" asp-controller="User"
+                            asp-action="EditProfile">Editar perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -56,39 +58,50 @@
                             </div>
                         </div>
                         <div class="heart-comment">
-                            <div class="Like">
-                                <img src="~/img/Vector (1).png" alt="Curtir">
+                            <div class="botao">
+                                <div class="content-txt">
+                                    <div class="content">
+                                        <i onclick="Toggle()" id="btn" class="far fa-heart"></i>
+                                    </div>
+                                    <span class="numb"></span>
+                                    <span class="text">Curtidas</span>
+                                </div>
                             </div>
                             <div class="Ballon">
                                 <img src="~/img/ballon.png" alt="Comentários">
                             </div>
                         </div>
-                        <p class="curtidas">100 curtidas</p>
-                        <div class="container">
-                            <div class="users-comment">
-                                <h4>fausto_silva</h4>
-                                <p>Esse cara é fera bixo!!</p>
-                            </div>
-                            <div class="coracoes">
-                                <img src="~/img/Vector (1).png" alt="curtir">
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="users-comment">
-                                <h4>Marcos_Jeeves</h4>
-                                <p>thank you!</p>
-                            </div>
-                            <div class="coracoes">
-                                <img src="~/img/Vector (1).png" alt="curtir">
-                            </div>
-                        </div>
                         <div class="resto">
                             <p>Ver todos os 69 Comentários</p>
                         </div>
+                        @foreach (Comments x in ViewBag.Comments)
+                        {
+
+                            <div class="coments">
+                                <div class="title">
+                                    <h6>nome</h6>
+                                </div>
+                                <div class="txt">
+                                    <p>@x.Message</p>
+                                    <p class="delet"><a class="delete" asp-controller="Comment" asp-action="Delete"
+                                        asp-route-id="@x.IdComment"><img class="delete-img" src="~/img/ballon.png"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        }
+
+                        <div class="coments2">
+                            <form method="POST" action='@Url.Action("Comment")'>
+                                <input name="Message" class="comentario" placeholder="Digite aqui" type="text">
+                                <button type="submit" class="bbtn">Comentar...</button>
+                            </form>
+                        </div>
+
 
                     </div>
                 </div>
         </section>
     </main>
 </body>
+
 </html>
