@@ -21,15 +21,15 @@ namespace InstaDev_G1_DT.Controllers
             commentModels.Create(newComment); // aqui será gerado o ID para o comentário
             ViewBag.Comments = commentModels.ReadAllItens(); // o commentModels que estava com o ID e a mensagem do comentário será guardado dentro da ViewBag Comments
 
-            return LocalRedirect("~/Profile");
+            return LocalRedirect("Profile");
         }
 
-        [Route ("Profile/{id}")]
+        [Route ("Profile")]
         public IActionResult Delete(int id){ // método para apagar o comentário da publicação(e do CSV)
             commentModels.Delete(id); // o commentModels puxa da Models o método de Deletar pelo ID
             ViewBag.Comments = commentModels.ReadAllItens(); // o ViewBag que foi guardado o ID e a mensagem do comentário no método acima(Comment) será "re-lido" para ver as informações que existem lá dentro novamente
 
-            return LocalRedirect("~/Profile");
+            return LocalRedirect("Profile");
         }
     }
 }

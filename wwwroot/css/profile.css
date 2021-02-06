@@ -294,29 +294,30 @@
 }
 .txt{
     /* background-color: coral; */
-    width: 80%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.delete-img{
-    width: 100%;
-    transition: 0.5s;
+.delete img{
+    width: 20px;
+    height: 20px;
+    display: flex;
     
 }
 .delet{
     /* background-color: red; */
-    width: 5%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
 }
 .coments2{
     /* background-color: rgb(255, 0, 157); */
-      width: 100%;
-      margin: 10px 0px;
-      height: 40px;
+    width: 100%;
+    margin: 10px 0px;
+    height: 40px;
     display: block;
     justify-content: center;
     align-items: center;
