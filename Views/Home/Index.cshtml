@@ -31,7 +31,7 @@
                 </div>
             </div>
         </section>
-    
+    </header>
     </div>
     <section>
         <div class="storiesperfil">
@@ -103,7 +103,7 @@
                 </h1>
             </div>
             <div class="botoes-postar">
-                <form method="POST" action='@Url.Action("Publicar")'>
+                <form method="POST" action='@Url.Action("Publicar")'enctype="multipart/form-data">
                     <div class="desc">
                         <input type="text" name="Subtitle" id="">
                     </div>

@@ -65,12 +65,12 @@ namespace InstaDev_G1_DT.Controllers
            
             // Uploud termino
             newPub.Subtitle= form["Subtitle"];
-            
+            newPub.idUser=
 
 
             // Chamamos o método Create para salvar
             // a novaEquipe no CSV
-            pubModels.Create(pubModels);
+            pubModels.Create(newPub);
             ViewBag.Equipes = pubModels.ReadAllItens();
 
             return LocalRedirect("~/Home/Index");
