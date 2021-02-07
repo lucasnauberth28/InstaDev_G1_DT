@@ -1,0 +1,119 @@
+@{
+    ViewData["Title"] = "Feed";
+}
+
+<html lang="pt-br">
+
+<head>
+
+
+</head>
+
+<body>
+    <header class="menu">
+        <section class="nav">
+            <div class="logo">
+                <img src="imagens/Instadev (1).svg" alt="Logo do Instadev">
+            </div>
+
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <p>Pesquisar</p>
+            </div>
+
+            <div class="menu-btn">
+                <i class="fas fa-home"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <div class="perfil">
+                    <img src="imagens/thank-you 1.png" alt="Foto de perfil">
+                </div>
+            </div>
+        </section>
+    </header>
+    </div>
+    <section>
+        <div class="storiesperfil">
+            <div class="stories">
+                <div class="stories1">
+                    <img src="imagens/vin-diesel 1.svg" alt="stories 2">
+                    <p>
+                        vin_diesel
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="imagens/gabigordo 1.svg" alt="stories 2">
+                    <p>
+                        gabigordo
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="imagens/will-baiano 1.svg" alt="stories 3">
+                    <p>
+                        will_baiano
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="imagens/tony_stark 1.svg" alt="stories 4">
+                    <p>
+                        adriano_stark
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="imagens/pele 1.svg" alt="stories 5">
+                    <p>
+                        King_pelé
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="imagens/samuel-rosa-bebê 1.svg" alt="stories 6">
+                    <p>
+                        samuel_rosa
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="imagens/chaves_metal 1.svg" alt="stories 7">
+                    <p>
+                        chaves_metal
+                    </p>
+                </div>
+            </div>
+            <div class="perfil2">
+                <div class="photo">
+                    <img src="imagens/thank-you 2.svg" alt="Foto de perfil">
+                </div>
+                <div class="texto-perfil">
+                    <h2>
+                        Yes_baby
+                    </h2>
+                    <p>
+                        Marcos Jeeves
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Posts">
+        <div class="postar">
+            <div class="foto-postar">
+                <img src="imagens/thank-you 3.svg" alt="Foto de perfil">
+                <h1>
+                    Postar
+                </h1>
+            </div>
+            <div class="botoes-postar">
+                <form method="POST" action='@Url.Action("Publicar")' enctype="multipart/form-data">
+                    <div class="desc">
+                        <input type="text" name="Subtitle" id="">
+                    </div>
+
+                    <input type="file" value="Escolha a imagem" nome="Image" class="b-img">
+                    <input type="submit" name="Image" class="b-img2">Postar</input>
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+</body>

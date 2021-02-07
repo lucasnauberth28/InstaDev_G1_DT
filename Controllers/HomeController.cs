@@ -47,7 +47,7 @@ namespace InstaDev_G1_DT.Controllers
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
-            return LocalRedirect("~/");
+            return LocalRedirect("~/Feed");
 
         }
 
