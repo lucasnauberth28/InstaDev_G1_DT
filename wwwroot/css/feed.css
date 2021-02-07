@@ -133,9 +133,12 @@ body{
     flex-direction: column;
     align-items: center;
 }
-.perfil2 h2{
+.perfil2 a{
     font-size: 25px;
-    ;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
 }
 .perfil2 p{
     

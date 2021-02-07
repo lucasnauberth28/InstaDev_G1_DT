@@ -24,6 +24,7 @@ namespace InstaDev_G1_DT.Controllers
             // através do formulário
             // e salvamos no objeto novaEquipe
             Publication newPub = new Publication();
+            User user = new User();
             newPub.IdPublication = pubModels.idGPublication();
             newPub.Subtitle = form["Subtitle"];
             newPub.Image = form["Image"];

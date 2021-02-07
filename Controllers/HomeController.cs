@@ -43,11 +43,11 @@ namespace InstaDev_G1_DT.Controllers
             if (logado != null)
             {
                 HttpContext.Session.SetString("E-mail", logado.Split(";")[1]);
-                return LocalRedirect("~/User/Register");
+                return LocalRedirect("~/Feed");
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
-            return LocalRedirect("~/Feed");
+            return LocalRedirect("~/");
 
         }
 
