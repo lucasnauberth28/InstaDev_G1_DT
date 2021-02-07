@@ -6,13 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace InstaDev_G1_DT.Controllers
 {
     // localhost:5001/User
-    [Route ("User")]
+    [Route ("Register")]
     public class UserController:Controller
     {
         User userModels = new User();
 
         // localhost:5001/User/Register
-        [Route ("Register")]
         public IActionResult Register(){
             ViewBag.Users = userModels.ReadAllItems();
             return View();
