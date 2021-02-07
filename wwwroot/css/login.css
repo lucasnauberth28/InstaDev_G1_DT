@@ -32,9 +32,12 @@ body {
  display: flex;
  justify-content: space-around;
 }
-
+.centralizarlogo img{
+    height: 50%;
+    width: 50%;
+}
 .erro{
-    color: #6c1fe9;
+    color: red;
     padding-left: 45px;
 }
 

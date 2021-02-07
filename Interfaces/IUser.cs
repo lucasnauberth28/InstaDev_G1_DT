@@ -8,7 +8,7 @@ namespace InstaDev_G1_DT.Interfaces
         // CRUD
         void Create(User newUser);
         List<User> ReadAllItems();
-        void Update();
-        void Delete();
+        void Update(User userUpdate);
+        void Delete(int id);
     }
 }

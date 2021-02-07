@@ -6,20 +6,22 @@ using Microsoft.AspNetCore.Mvc;
 namespace InstaDev_G1_DT.Controllers
 {
     // localhost:5001/User
-    [Route ("Register")]
-    public class UserController:Controller
+    [Route("Register")]
+    public class UserController : Controller
     {
         User userModels = new User();
 
         // localhost:5001/User/Register
-        public IActionResult Register(){
+        public IActionResult Register()
+        {
             ViewBag.Users = userModels.ReadAllItems();
             return View();
         }
 
         // localhost:5001/User/New
-        [Route ("New")]
-        public IActionResult Registration(IFormCollection registrationForm){ // o IActionResult e o IFormCollection fazem parte de bibliotecas do AspNetCore
+        [Route("New")]
+        public IActionResult Registration(IFormCollection registrationForm)
+        { // o IActionResult e o IFormCollection fazem parte de bibliotecas do AspNetCore
             User newUser = new User();
             newUser.Email = registrationForm["Email"];
             newUser.CompleteName = registrationForm["CompleteName"];
@@ -34,5 +36,6 @@ namespace InstaDev_G1_DT.Controllers
             // localhost:5001/User/Register
             return LocalRedirect("~/");
         }
+
     }
 }

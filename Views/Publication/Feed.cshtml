@@ -4,35 +4,37 @@
 
 <html lang="pt-br">
 
-<head>
+<header class="menu">
+    <section class="nav">
+        <div class="logo">
+            <a asp-area="Voltar para o Feed" asp-controller="Publication" asp-action="Feed">
+                <img src="/imgEdit/Instadev.svg" alt="Logo do Instadev">
+            </a>
+        </div>
 
+        <div class="search">
+            <button class="submit-lupa" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+            <input type="text" placeholder="Pesquisar" class="search-input" />
 
-</head>
+        </div>
+
+        <div class="menu-btn">
+            <i class="fas fa-home"></i>
+            <i class="far fa-paper-plane"></i>
+            <i class="far fa-compass"></i>
+            <i class="far fa-heart"></i>
+            <div class="perfil">
+                <a asp-area="Direcionamento para a página de perfil" asp-controller="Profile" asp-action="Profile">
+                    <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfil">
+                </a>
+            </div>
+        </div>
+    </section>
+</header>
 
 <body>
-    <header class="menu">
-        <section class="nav">
-            <div class="logo">
-                <img src="/img/Instadev (1).svg" alt="Logo do Instadev">
-            </div>
-
-            <div class="search">
-                <i class="fas fa-search"></i>
-                <p>Pesquisar</p>
-            </div>
-
-            <div class="menu-btn">
-                <i class="fas fa-home"></i>
-                <i class="far fa-paper-plane"></i>
-                <i class="far fa-compass"></i>
-                <i class="far fa-heart"></i>
-                <div class="perfil">
-                    <img src="/img/thank-you 1.png">
-                </div>
-            </div>
-        </section>
-    </header>
-    </div>
     <section>
         <div class="storiesperfil">
             <div class="stories">
@@ -80,13 +82,15 @@
                 </div>
             </div>
             <div class="perfil2">
-                <div  class="photo">
-                    <img src="/img/thank-you 2.svg">
+                <div class="photo">
+                    <a asp-area="Direcionamento para a página de perfil" asp-controller="Profile" asp-action="Profile">
+                        <img src="/img/thank-you 2.svg">
+                    </a>
                 </div>
                 <div class="texto-perfil">
-                    <a asp-area="" asp-controller="Publication" asp-action="Feed">
+                    <h2>
                         Yes_baby
-                    </a>
+                    </h2>
                     <p>
                         Marcos Jeeves
                     </p>
