@@ -12,6 +12,8 @@ namespace InstaDev_G1_DT.Controllers
 
         public IActionResult Feed()
         {
+            User user = new User();
+            ViewBag.Users = user.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("IdUser")));
             ViewBag.Publications = pubModels.ReadAllItens();
             return View();
         }
@@ -58,13 +60,13 @@ namespace InstaDev_G1_DT.Controllers
 
             // Uploud termino
             newPub.Subtitle = form["Subtitle"];
-            newPub.IdUser = int.Parse(form["IdUser"]);
+            newPub.IdUser = int.Parse(HttpContext.Session.GetString("IdUser"));
 
 
             // Chamamos o método Create para salvar
             // a novaEquipe no CSV
             pubModels.Create(newPub);
-            ViewBag.Equipes = pubModels.ReadAllItens();
+            ViewBag.Users = pubModels.ReadAllItens();
 
             return LocalRedirect("~/Feed");
         }
