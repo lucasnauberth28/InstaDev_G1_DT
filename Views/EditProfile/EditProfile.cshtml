@@ -26,7 +26,7 @@
                 <i class="far fa-heart"></i>
                 <div class="perfil">
                     <a asp-area="Direcionamento para a página de perfil" asp-controller="Profile" asp-action="Profile">
-                        <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfil">
+                        <img src="/imgEdit/@ViewBag.Photo" alt="Foto de perfil">
                     </a>
                 </div>
             </div>
@@ -42,10 +42,10 @@
                 <form action='@Url.Action("EditProfile")' enctype="multipart/form-data">
                 <div class="perfilFoto">
                     <div class="circle">
-                        <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfi">
+                        <img src="/imgEdit/@ViewBag.Photo" alt="Foto de perfi">
                     </div>
                     <div class="textFoto">
-                        <p>yes_baby</p>
+                        <p>@ViewBag.UserName</p>
                         <label for="files" class="btn-img">Alterar foto de perfil</label>
                         <input id="files" style="visibility:hidden;" type="file">
                     </div>
