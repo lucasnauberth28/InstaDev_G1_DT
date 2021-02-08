@@ -12,8 +12,6 @@ namespace InstaDev_G1_DT.Controllers
 
         public IActionResult Feed()
         {
-            User user = new User();
-            ViewBag.Users = user.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("IdUser")));
             ViewBag.Publications = pubModels.ReadAllItens();
             return View();
         }
@@ -26,7 +24,6 @@ namespace InstaDev_G1_DT.Controllers
             // através do formulário
             // e salvamos no objeto novaEquipe
             Publication newPub = new Publication();
-            User user = new User();
             newPub.IdPublication = pubModels.idGPublication();
             newPub.Subtitle = form["Subtitle"];
             newPub.Image = form["Image"];
@@ -54,19 +51,17 @@ namespace InstaDev_G1_DT.Controllers
                     // Salvamos o arquivo no caminho especificado
                     file.CopyTo(stream);
                 }
-                newPub.Image = file.FileName;
+                newPub.Image = file.FileName +".png";
             }
 
 
             // Uploud termino
             newPub.Subtitle = form["Subtitle"];
-            newPub.IdUser = int.Parse(HttpContext.Session.GetString("IdUser"));
 
 
             // Chamamos o método Create para salvar
             // a novaEquipe no CSV
             pubModels.Create(newPub);
-            ViewBag.Users = pubModels.ReadAllItens();
 
             return LocalRedirect("~/Feed");
         }

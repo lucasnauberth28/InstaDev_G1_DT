@@ -113,7 +113,15 @@
                     </div>
 
                     <input type="file" value="Escolha a imagem" nome="Image" class="b-img">
-                    <input type="submit" name="Image" class="b-img2">Postar</input>
+                    <input type="submit" name="Image">
+                    @foreach (var publication in ViewBag.Publications)
+                    {
+                        <tr>
+                            <td>@publication.Subtitle</td>
+                            <td>@publication.</td>
+                            <td><img src="/img/Equipes/@publication.Image" width="50"></td>
+                        </tr>
+                    }
                 </form>
             </div>
         </div>
