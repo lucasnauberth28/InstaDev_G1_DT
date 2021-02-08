@@ -37,7 +37,7 @@ namespace InstaDev_G1_DT.Controllers
         public User MostrarUsuario()
         {
             var userid = HttpContext.Session.GetString("_UserId");
-            User userLogado = userModels.SearchUSerForId(int.Parse(userid));
+            User userLogado = userModels.SearchUserWithId(int.Parse(userid));
 
             return userLogado;
         }

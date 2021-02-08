@@ -27,6 +27,7 @@ namespace InstaDev_G1_DT.Controllers
             newUser.CompleteName = registrationForm["CompleteName"];
             newUser.UserName = registrationForm["UserName"];
             newUser.Password = registrationForm["Password"];
+            newUser.Photo = "default.png";
 
             newUser.IdUser = userModels.IdGenerator(); // o IdUser do usuário será igual ao método IdGenerator dentro do userModels || assim, será gerado toda vez que o método de Register for executado 
 
@@ -36,6 +37,5 @@ namespace InstaDev_G1_DT.Controllers
             // localhost:5001/User/Register
             return LocalRedirect("~/");
         }
-
     }
 }

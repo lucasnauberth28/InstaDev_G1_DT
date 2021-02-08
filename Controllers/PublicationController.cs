@@ -13,7 +13,6 @@ namespace InstaDev_G1_DT.Controllers
         public IActionResult Feed()
         {
             User user = new User();
-            ViewBag.Users = user.SearchUSerForId(int.Parse(HttpContext.Session.GetString("IdUser")));
             ViewBag.Publications = pubModels.ReadAllItens();
               
             return View();
