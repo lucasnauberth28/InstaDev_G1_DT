@@ -81,11 +81,11 @@ namespace InstaDev_G1_DT.Models
             linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
             RewriteCSV(PATH, linhas);   // Funcionalidade: Edit Perfil. Oq faz: Deleta a conta definitivamente do usuário
         }
-        public User BuscarUsuarioPorId(int id)
+        public User SearchUSerForId(int id)
         {
-            User usuarioSearch = new User();
+            User userSearch = new User();
 
-            List<String> busca = usuarioSearch.ReadAllLinesCSV("Database/register.csv");
+            List<String> busca = userSearch.ReadAllLinesCSV("Database/register.csv");
 
             var SearchLine =
             busca.Find(
@@ -94,22 +94,23 @@ namespace InstaDev_G1_DT.Models
             );
 
             var userString = SearchLine.Split(";");
-            User usuarioSearched = new User();
-            usuarioSearched.IdUser = int.Parse(userString[0]);
-           usuarioSearched.Email = userString[1];
-            usuarioSearched.CompleteName = userString[2];
-            usuarioSearched.UserName = userString[3];
-            usuarioSearched.Password = userString[4];
+            User userSearched = new User();
+            userSearched.IdUser = int.Parse(userString[0]);
+            userSearched.Email = userString[1];
+            userSearched.CompleteName = userString[2];
+            userSearched.UserName = userString[3];
+            userSearched.Password = userString[4];
             if (userString[6] == "")
             {
-                usuarioSearched.Photo = "padrao.png";
+                userSearched.Photo = "padrao.png";
             }
             else
             {
-                usuarioSearched.Photo = userString[6];
+                userSearched.Photo = userString[6];
             }
-            return usuarioSearched;
+            return userSearched;
         }
+
 
 
     }
