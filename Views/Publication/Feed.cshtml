@@ -1,39 +1,40 @@
 @{
     ViewData["Title"] = "Feed";
+
 }
+
 
 <html lang="pt-br">
 
-<header class="menu">
-    <section class="nav">
-        <div class="logo">
-            <a asp-area="Voltar para o Feed" asp-controller="Publication" asp-action="Feed">
-                <img src="/imgEdit/Instadev.svg" alt="Logo do Instadev">
-            </a>
-        </div>
-
-        <div class="search">
-            <button class="submit-lupa" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-            <input type="text" placeholder="Pesquisar" class="search-input" />
-
-        </div>
-
-        <div class="menu-btn">
-            <i class="fas fa-home"></i>
-            <i class="far fa-paper-plane"></i>
-            <i class="far fa-compass"></i>
-            <i class="far fa-heart"></i>
-            <div class="perfil">
-                <a asp-area="Direcionamento para a página de perfil" asp-controller="Profile" asp-action="Profile">
-                    <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfil">
+ <header class="menu">
+        <section class="nav">
+            <div class="logo">
+                <a asp-area="Voltar para o Feed" asp-controller="Publication" asp-action="Feed">
+                    <img src="/imgEdit/Instadev.svg" alt="Logo do Instadev">
                 </a>
             </div>
-        </div>
-    </section>
-</header>
 
+            <div class="search">
+                <button class="submit-lupa" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <input type="text" placeholder="Pesquisar" class="search-input" />
+
+            </div>
+
+            <div class="menu-btn">
+                <i class="fas fa-home"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <div class="perfil">
+                    <a asp-area="Direcionamento para a página de perfil" asp-controller="Profile" asp-action="Profile">
+                        <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfil">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
 <body>
     <section>
         <div class="storiesperfil">
@@ -99,6 +100,7 @@
         </div>
     </section>
     <section class="Posts">
+
         <div class="postar">
             <div class="foto-postar">
                 <img src="/img/thank-you 3.svg" alt="Foto de perfil">
@@ -112,16 +114,21 @@
                         <input type="text" name="Subtitle" id="">
                     </div>
 
-                    <input type="file" value="Escolha a imagem" nome="Image" class="b-img">
-                    <input type="submit" name="Image">
-                    @foreach (var publication in ViewBag.Publications)
-                    {
-                        <tr>
-                            <td>@publication.Subtitle</td>
-                            <td>@publication.</td>
-                            <td><img src="/img/Equipes/@publication.Image" width="50"></td>
-                        </tr>
-                    }
+                    <input type="file" name="Image" class="b-img">
+                    <input type="submit" name="Image" class="b-img2">
+
+                    <div class="areavermelha">
+
+                        @foreach (var p in @ViewBag.Publications)
+                        {
+                            <div class="img-post">
+                                <img class="img-do-post" src="~/img/Posts/@p.Image" width="500" height="320" />
+                                <p class="img-description">@p.Subtitle</p>
+                            </div>
+                        }
+
+                    </div>
+
                 </form>
             </div>
         </div>

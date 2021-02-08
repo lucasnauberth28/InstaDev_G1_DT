@@ -12,18 +12,19 @@ namespace InstaDev_G1_DT.Controllers
 
         public IActionResult Feed()
         {
+            
+           
             ViewBag.Publications = pubModels.ReadAllItens();
+              
             return View();
         }
 
         [Route("Publicar")]
         public IActionResult Publicar(IFormCollection form)
         {
-            // Criamos uma nova instância de Equipe
-            // e armazenamos os dados enviados pelo usúarios
-            // através do formulário
-            // e salvamos no objeto novaEquipe
+          
             Publication newPub = new Publication();
+          
             newPub.IdPublication = pubModels.idGPublication();
             newPub.Subtitle = form["Subtitle"];
             newPub.Image = form["Image"];
@@ -35,7 +36,7 @@ namespace InstaDev_G1_DT.Controllers
                 //Se sim,
                 //Armazenamos o arquivo na variável file
                 var file = form.Files[0];
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Pubs");
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Posts");
 
                 // Verificamos se a pasta Equipes não existe
                 if (!Directory.Exists(folder))
@@ -51,18 +52,20 @@ namespace InstaDev_G1_DT.Controllers
                     // Salvamos o arquivo no caminho especificado
                     file.CopyTo(stream);
                 }
-                newPub.Image = file.FileName +".png";
+                newPub.Image = file.FileName;
             }
 
 
             // Uploud termino
             newPub.Subtitle = form["Subtitle"];
+           
 
 
             // Chamamos o método Create para salvar
             // a novaEquipe no CSV
             pubModels.Create(newPub);
-
+            
+           
             return LocalRedirect("~/Feed");
         }
 

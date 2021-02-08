@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using InstaDev_G1_DT.Interfaces;
+
 
 namespace InstaDev_G1_DT.Models
 {
@@ -8,7 +10,7 @@ namespace InstaDev_G1_DT.Models
     {
         public int IdPublication { get; set; } // Id da publicação
         public string Image { get; set; } // Imagem da publicação
-        public string Subtitle { get; set; } // Legenda da publicação
+        public string Subtitle { get; set; } // Legenda da publicação 
         private const string PATH = "Database/publication.CSV";
 
         public Publication()
@@ -61,10 +63,13 @@ namespace InstaDev_G1_DT.Models
 
                 //objeto publicação criado
                 Publication publication = new Publication();
+                User user= new User();
 
-                publication.IdPublication = int.Parse(Lines[0]);
-                publication.Subtitle = Lines[1];
-                publication.Image = Lines[2];
+                publication.IdPublication =Int32.Parse(Line[0]);
+               
+                publication.Subtitle = Line[1];
+                publication.Image = Line[2];
+               
 
                 publications.Add(publication);
 
