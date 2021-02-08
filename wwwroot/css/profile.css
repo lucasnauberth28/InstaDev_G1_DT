@@ -256,7 +256,7 @@
     cursor: pointer;
 }
 .text{
-    font-family: 'Segoe UI';
+    font-family: Segoe UI;
     padding-left: 5px;
     font-style: normal;
     font-weight: normal;
@@ -267,7 +267,7 @@
 }
 .numb:before{
     content: '0';
-    font-family: 'Segoe UI';
+    font-family: Segoe UI;
     padding-left: 10px;
     font-style: normal;
     font-weight: normal;
@@ -291,11 +291,10 @@
     margin: 10px 0px;
     height: 40px;
     display: flex;
-    justify-content: space-between;
 }
 .title{
-    width: 17%;
-    height: 100%;
+    width: 100px;
+    height: 20px;
     /* background-color: cadetblue; */
     display: flex;
     justify-content: center;
@@ -316,7 +315,7 @@
     height: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-left: 30px;
 }
 .delete img{
     width: 40px;
@@ -330,6 +329,7 @@
     height: 20px;
     display: flex;
     align-items: center;
+    margin-left: 30px;
 }
 .coments2{
     /* background-color: rgb(255, 0, 157); */
@@ -362,7 +362,7 @@
     transition: 0.5s;
 }
 .curtidas{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 900;
     margin-left: 35px;
