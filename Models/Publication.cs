@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using InstaDev_G1_DT.Interfaces;
+
 
 namespace InstaDev_G1_DT.Models
 {
@@ -8,9 +10,7 @@ namespace InstaDev_G1_DT.Models
     {
         public int IdPublication { get; set; } // Id da publicação
         public string Image { get; set; } // Imagem da publicação
-        public string Subtitle { get; set; } // Legenda da publicação
-        public int IdUser { get; set; } // CORRIGIR: IdUser - int id - FK || Id do usuário da publicação
-        public int Likes { get; set; } // Curtidas da publicação
+        public string Subtitle { get; set; } // Legenda da publicação 
         private const string PATH = "Database/publication.CSV";
 
         public Publication()
@@ -19,7 +19,7 @@ namespace InstaDev_G1_DT.Models
         }
         public string PrepareLinesCSV(Publication p)
         {
-            return $"{p.IdUser};{p.IdPublication};{p.Subtitle};{p.Image};{p.Likes}";
+            return $"{p.IdPublication};{p.Subtitle};{p.Image}";
         }
 
         public int idGPublication()
@@ -63,12 +63,13 @@ namespace InstaDev_G1_DT.Models
 
                 //objeto publicação criado
                 Publication publication = new Publication();
+                User user= new User();
 
-                publication.IdPublication = int.Parse(Lines[0]);
-                publication.IdUser = int.Parse(Lines[1]);
-                publication.Subtitle = Lines[2];
-                publication.Image = Lines[3];
-                publication.Likes = int.Parse(Lines[4]);
+                publication.IdPublication =Int32.Parse(Line[0]);
+               
+                publication.Subtitle = Line[1];
+                publication.Image = Line[2];
+               
 
                 publications.Add(publication);
 
