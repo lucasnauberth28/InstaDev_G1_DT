@@ -83,32 +83,32 @@ namespace InstaDev_G1_DT.Models
         }
         public User BuscarUsuarioPorId(int id)
         {
-            User usuarioBusca = new User();
+            User usuarioSearch = new User();
 
-            List<String> csv = usuarioBusca.ReadAllLinesCSV("Database/register.csv");
+            List<String> busca = usuarioSearch.ReadAllLinesCSV("Database/register.csv");
 
-            var linhaBuscada =
-            csv.Find(
+            var SearchLine =
+            busca.Find(
                 x =>
                 x.Split(";")[0] == id.ToString()
             );
 
-            var usuarioLinha = linhaBuscada.Split(";");
-            User usuarioBuscado = new User();
-            usuarioBuscado.IdUser = int.Parse(usuarioLinha[0]);
-            usuarioBuscado.Email = usuarioLinha[1];
-            usuarioBuscado.CompleteName = usuarioLinha[2];
-            usuarioBuscado.UserName = usuarioLinha[3];
-            usuarioBuscado.Password = usuarioLinha[4];
-            if (usuarioLinha[6] == "")
+            var userString = SearchLine.Split(";");
+            User usuarioSearched = new User();
+            usuarioSearched.IdUser = int.Parse(userString[0]);
+           usuarioSearched.Email = userString[1];
+            usuarioSearched.CompleteName = userString[2];
+            usuarioSearched.UserName = userString[3];
+            usuarioSearched.Password = userString[4];
+            if (userString[6] == "")
             {
-                usuarioBuscado.Photo = "padrao.png";
+                usuarioSearched.Photo = "padrao.png";
             }
             else
             {
-                usuarioBuscado.Photo = usuarioLinha[6];
+                usuarioSearched.Photo = userString[6];
             }
-            return usuarioBuscado;
+            return usuarioSearched;
         }
 
 

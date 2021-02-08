@@ -39,6 +39,7 @@
             </div>
 
             <div class="opcoes">
+                <form action='@Url.Action("EditProfile")' enctype="multipart/form-data">
                 <div class="perfilFoto">
                     <div class="circle">
                         <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfi">
@@ -76,12 +77,13 @@
                     </div>
                 </div>
                 <div class="botao">
-                    <a asp-action="Delete" asp-controller="EditProfile" class="btn">Enviar</a>
+                    <a asp-action="EditarPerfil/SwitchData" asp-controller="EditProfile" class="btn">Enviar</a>
                     <a asp-area="Voltar para o perfil" asp-controller="Profile" asp-action="Profile"
                         class="btn">Voltar</a>
                     <a asp="#" class="btn">Sair</a>
                     <a href="#" class="desative">Desativar minha conta definitivamente</a>
-                </div>
+                    </div> 
+                </form>
             </div>
         </section>
     </main>

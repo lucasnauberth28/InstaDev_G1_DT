@@ -9,7 +9,7 @@ body {
 }
 
 #conteudo {
-    margin-top: 162px;
+    margin-top:150px;
     background-color: #f2f2f2;
     display: flex;
     align-items: center;
@@ -65,7 +65,8 @@ body {
     font-size: 13;
     width: 267px;
     height: 35px;
-    background-color:#2686cc;
+    background-color:#0095f6;
+    border-radius: 6px;
     padding: 9px 50px;
     color: white;
     margin-left: 38px;
@@ -112,6 +113,10 @@ body {
     text-decoration: none;
 }
 
+.esqueciasenha:hover{
+    text-decoration: underline;
+}
+
 /* .hr2 {
     border-top: 50px;
     border-top: medium double #CCC;
@@ -137,21 +142,21 @@ body {
       justify-content: space-evenly;
       align-items: center;
       margin-top: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   .testehr hr{
       width: 100px;
   }
 
 .centralizarcadastrese {
-    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
 .centrafoot {
-display: flex;
-justify-content: center;
-align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
  
 }
 .frasenocentro {
@@ -165,4 +170,8 @@ align-items: flex-end;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+.cad:hover{
+    text-decoration: underline;
 }
