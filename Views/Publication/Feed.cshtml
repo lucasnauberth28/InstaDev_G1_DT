@@ -100,25 +100,24 @@
         </div>
     </section>
     <section class="Posts">
-
         <div class="postar">
             <div class="foto-postar">
                 <img src="/img/thank-you 3.svg" alt="Foto de perfil">
-                <h1>
+                <h2>
                     Postar
-                </h1>
+                </h2>
             </div>
             <div class="botoes-postar">
                 <form method="POST" action='@Url.Action("Publicar")' enctype="multipart/form-data">
-                    <div class="desc">
-                        <input type="text" name="Subtitle" id="">
-                    </div>
-
-                    <input type="file" name="Image" class="b-img">
-                    <input type="submit" name="Image" class="b-img2">
-
+                <div class="desc">
+                        <input type="text" name="Subtitle" id="" placeholder="Digite a descrição da imagem" class="descr">
+                            <div class="selectImg">
+                                <label for="file" >Escolha a imagem</label>
+                                <input type="file" id="file" name="Image" class="b-img" placeholder="Escolha a imagem" style="visibility:hidden;">
+                            </div>
+                        <input type="submit" name="Image" class="b-img2">
+                </div>
                     <div class="areavermelha">
-
                         @foreach (var p in @ViewBag.Publications)
                         {
                             <div class="img-post">
@@ -126,7 +125,6 @@
                                 <p class="img-description">@p.Subtitle</p>
                             </div>
                         }
-
                     </div>
 
                 </form>

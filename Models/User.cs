@@ -30,7 +30,7 @@ namespace InstaDev_G1_DT.Models
 
         public string PrepareLinesCSV(User prepareLines)
         { // aqui será preparado o modo como será armazenado automaticamente as linhas dentro do CSV
-            return $"{prepareLines.IdUser};{prepareLines.Email};{prepareLines.CompleteName};{prepareLines.UserName};{prepareLines.Password}";
+            return $"{prepareLines.IdUser};{prepareLines.Email};{prepareLines.CompleteName};{prepareLines.UserName};{prepareLines.Password};{prepareLines.Photo}";
         }
 
         public int IdGenerator()
@@ -60,6 +60,16 @@ namespace InstaDev_G1_DT.Models
                 user.CompleteName = data[2];
                 user.UserName = data[3];
                 user.Password = data[4];
+                user.Photo = data[5];
+
+                if (data[5] == "")
+                {
+                    user.Photo = "default.png";
+                }
+                else
+                {
+                    user.Photo = data[5];
+                }
 
                 users.Add(user); // aqui estamos adicionando o que foi instanciado para dentro da lista principal deste contexto
             }
@@ -81,37 +91,35 @@ namespace InstaDev_G1_DT.Models
             linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
             RewriteCSV(PATH, linhas);   // Funcionalidade: Edit Perfil. Oq faz: Deleta a conta definitivamente do usuário
         }
-        public User SearchUSerForId(int id)
+        public User SearchUserWithId(int id)
         {
-            User userSearch = new User();
+            User searchUser = new User();
 
-            List<String> busca = userSearch.ReadAllLinesCSV("Database/register.csv");
+            List<string> csv = searchUser.ReadAllLinesCSV("Database/register.csv");
 
-            var SearchLine =
-            busca.Find(
+            var searchedLine =
+            csv.Find(
                 x =>
                 x.Split(";")[0] == id.ToString()
             );
 
-            var userString = SearchLine.Split(";");
-            User userSearched = new User();
-            userSearched.IdUser = int.Parse(userString[0]);
-            userSearched.Email = userString[1];
-            userSearched.CompleteName = userString[2];
-            userSearched.UserName = userString[3];
-            userSearched.Password = userString[4];
-            if (userString[6] == "")
+            var userLine = searchedLine.Split(";");
+            User searchedUser = new User();
+            searchedUser.IdUser = int.Parse(userLine[0]);
+            searchedUser.Email = userLine[1];
+            searchedUser.CompleteName = userLine[2];
+            searchedUser.UserName = userLine[3];
+            searchedUser.Password = userLine[4];
+            searchedUser.Photo = userLine[5];
+            if (userLine[5] == "")
             {
-                userSearched.Photo = "padrao.png";
+                searchedUser.Photo = "default.png";
             }
             else
             {
-                userSearched.Photo = userString[6];
+                searchedUser.Photo = userLine[5];
             }
-            return userSearched;
+            return searchedUser;
         }
-
-
-
     }
 }
