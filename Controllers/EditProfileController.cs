@@ -80,15 +80,12 @@ namespace InstaDev_G1_DT.Controllers
         // }
 
         [Route("ExcluirPerfil")]
-        public IActionResult Excluir(int id)
+        public IActionResult UserDelete(int id)
         {
-            var userId = HttpContext.Session.GetString("_UserId");
-            if (userId == id.ToString())
-            {
-                userModels.Delete(id);
+            userModels.DeleteUser(id);
+            ViewBag.Users = userModels.ReadAllItems();
 
-            }
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/");
         }
     }
 }

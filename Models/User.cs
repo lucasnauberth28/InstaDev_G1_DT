@@ -121,5 +121,12 @@ namespace InstaDev_G1_DT.Models
             }
             return searchedUser;
         }
+
+        public void DeleteUser(int id){
+            List<string> lines = ReadAllLinesCSV(PATH);
+            lines.RemoveAll(x => x.Split(";")[0] == id.ToString());
+
+            RewriteCSV(PATH, lines);
+        }
     }
 }

@@ -43,6 +43,7 @@ namespace InstaDev_G1_DT.Controllers
             if (logado != null)
             {
                 HttpContext.Session.SetString("E-mail", logado.Split(";")[1]);
+                HttpContext.Session.SetString("IdUser", logado.Split(";")[0]);
                 return LocalRedirect("~/Feed");
             }
 

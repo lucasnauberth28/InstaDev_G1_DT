@@ -77,11 +77,11 @@
                     </div>
                 </div>
                 <div class="botao">
-                    <a asp-action="EditarPerfil/SwitchData" asp-controller="EditProfile" class="btn">Enviar</a>
+                    <a asp-controller="EditProfile" asp-action="Edit" class="btn">Enviar</a>
                     <a asp-area="Voltar para o perfil" asp-controller="Profile" asp-action="Profile"
                         class="btn">Voltar</a>
-                    <a asp="#" class="btn">Sair</a>
-                    <a asp-area="Voltar para login" asp-controller="ExcluirPerfil" asp-action="" class="desative">Desativar minha conta definitivamente</a>
+                    <a asp-controller="Home" asp-action="Index" class="btn">Sair</a>
+                    <a asp-area="Voltar para login" asp-controller="EditProfile" asp-action="UserDelete" class="desative">Desativar minha conta definitivamente</a>
                     </div> 
                 </form>
             </div>
